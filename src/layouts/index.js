@@ -32,7 +32,7 @@ class Navigation extends React.Component {
   render() { 
     return (
       <Navbar dark expand="md" fixed="top" className="bg-dark">
-        <NavbarBrand href="#"><LeafIcon /> Lawn and Order</NavbarBrand>
+        <NavbarBrand href="/"><LeafIcon /> Lawn and Order</NavbarBrand>
         <div style={{"color":"#FFF"}}><a href="tel:440-476-3275">440-476-3275</a></div>
         <NavbarToggler onClick={ this.toggle.bind(this) } />
         <Collapse isOpen={this.state.isOpen} navbar>
