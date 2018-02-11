@@ -5,30 +5,47 @@ import { VertCentRow, Icon } from '../../shared';
 import leaves from '../../img/leaves.svg';
 import grass from '../../img/grass.svg';
 import thumb from '../../img/thumbsup.svg';
+import flowers from '../../img/flowers.svg';
 
-const LilIcon = ({ src, style }) => (
-  <img style={{ ...style, borderRadius: "50%", border: "5px solid mintcream", padding: "5px", marginLeft: "1em", marginRight: "1em", width: '100px', height: '100px' }} src={src} />
+const LilIcon = ({ src, style, text }) => (
+  <span className="lilicon" style={{ fontSize: "1.25em" }}>
+    <span>
+      <img alt={text} style={{ ...style
+        , borderRadius: "50%"
+        , padding: "5px"
+        , marginLeft: "1em"
+        , background: "#FFF"
+        , marginRight: "1em"
+        , boxShadow: '10px 10px 5px 0px rgba(0,0,0,0.19)'
+        , width: '8em'
+        , height: '8em' }} src={src} />
+    </span>
+    <span style={{display:'none'}}>{ text }</span>
+  </span>
 )
 
 module.exports = ()=>(
   <main role="main">
-    <div style={{ paddingTop: '4em' }}>
-      <Container>
+    <div style={{ paddingTop: '1rem' }}>
+      <Container fluid style={{ background: "linear-gradient(110deg,#79BB3B, #52B775)", color: "#FFF", paddingTop: '1rem', paddingBottom: '5rem', textShadow: "2px 2px green" }}>
         <VertCentRow>
-          <h1 style={{ fontWeight: 400 }}>
-            Services
+          <h1 style={{ fontWeight: 100, fontSize: '6em' }}>
+            Meet Our 5-Star Services
           </h1>
-          <h2 style={{ fontWeight: 250, padding: "1em", lineHeight: "1.5em" }}> We provide a range of services for your commercial and residential needs, no job is too big or too small</h2>
         </VertCentRow>
         <VertCentRow>
-          <Col>
-            <LilIcon src={grass} />
-            <LilIcon src={thumb} />
-            <LilIcon src={leaves} />
-          </Col>
+          <h2 style={{ fontWeight: 250, fontSize: '1.75em', paddingLeft:'0.75em', lineHeight: '1.5em', paddingRight:'0.75em'  }}> We provide a range of services for your commercial and residential needs, no job is too big or too small</h2>
+        </VertCentRow>
+        <VertCentRow>
+          <div style={{ width: '100%' }}>
+            <LilIcon src={flowers} text="flower bedding" />
+            <LilIcon src={grass} text="mowing" />
+            <LilIcon src={leaves} text="leaf pickup" />
+            <LilIcon src={thumb} text="green thumbery" />
+          </div>
         </VertCentRow>
       </Container>
-      <Container fluid={true} style={{ marginTop: "4em" }}>
+      <Container fluid={true}>
         <Row>
           <Col style={{ background: "linear-gradient(to right, mintcream , white)" }} xs={12} sm={12} md={6}>
             <section style={{ padding: '10%' }}>

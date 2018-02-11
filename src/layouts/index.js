@@ -7,6 +7,7 @@ import { light } from '../styles/text';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 import leafIcon from '../img/leaf.svg';
 import './bootstrap.scss';
+import './styles.scss';
 
 function LeafIcon(props){
   let style =  props.style || {}
