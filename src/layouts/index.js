@@ -6,7 +6,6 @@ import { primary } from '../styles/colors';
 import { light } from '../styles/text';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 import leafIcon from '../img/leaf.svg';
-import './bootstrap.scss';
 import './styles.scss';
 
 function LeafIcon(props){
@@ -34,7 +33,7 @@ class Navigation extends React.Component {
     return (
       <Navbar dark expand="md" fixed="top" className="bg-dark">
         <NavbarBrand href="/"><LeafIcon /> Lawn and Order</NavbarBrand>
-        <div style={{"color":"#FFF"}}><a href="tel:440-476-3275">440-476-3275</a></div>
+        <div style={{"color":"#FFF"}}><a id="etphonehome" href="tel:440-476-3275"></a></div>
         <NavbarToggler onClick={ this.toggle.bind(this) } />
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto" navbar>

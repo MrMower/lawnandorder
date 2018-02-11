@@ -1,0 +1,124 @@
+
+@import 'bootstrap';
+
+#etphonehome {
+  @include media-breakpoint-down(sm) {
+    display:none;
+  }
+}
+
+#home {
+
+  .center {
+    text-align: center;
+  }
+
+  .jumbotron {
+    padding: 0;
+    padding-top: 3rem;
+    padding-bottom: 0rem;
+  }
+
+  .sub-pitch {
+    background: rgba(0,0,0,0.3175);
+    padding: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    p {
+      text-align: center;
+      font-size: 1.75rem;
+      font-weight: 200;
+      color: #FFF;
+    }
+  }
+
+  .icons {
+    font-weight: 400;
+  }
+
+  .pitch {
+    text-align: center;
+    //color: #98ca5e;
+
+    color:#FFF;
+    white-space: nowrap;
+    margin-left: -15px; 
+    font-size: 9rem;
+    font-weight: 100;
+  }
+
+}
+
+#services {
+  .hero {
+    //   background: linear-gradient(110deg,#79BB3B,#52B775);
+    color: #FFF;
+    //padding: 2rem 2rem 5rem 2rem;
+  }
+  .hero-title {
+    padding: 2rem;
+    font-weight: 100; 
+    font-size: 6rem;
+    margin-top: 3rem;
+    transform: rotate(-7deg);
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px green;
+    @include media-breakpoint-down(md) {
+      font-size: 4rem;
+    }
+  }
+  .hero-subtitle {
+    font-weight: 200;
+    font-size: 1.75em;
+    line-height: 1.5em;
+    padding:2rem;
+    margin:0;
+    width: 100%;
+    background: rgba(0,0,0,0.3175);
+    @include media-breakpoint-down(md) {
+      font-size: 1.25rem;
+    }
+  }
+  .section1 {
+    //background: linear-gradient(to right, #ddfff4, #FFF);
+    section {
+      padding: 10%;
+      h3 {
+        padding-top: 2rem; 
+        padding-bottom: 2rem;
+      }
+    }
+  }
+
+  .lil-icons{
+    transform: rotate(-7deg);
+    padding-bottom: 5rem;
+  }
+  .lilicon {
+    font-size: 1.25em;
+    img {
+      border-radius: 50%;
+      padding: 5px;
+      margin-left: 1rem;
+      background: #FFF;
+      margin-right: 1em;
+      box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.19);
+      width: 8rem;
+      height: 8rem;
+      @include media-breakpoint-down(md) {
+        width: 6rem;
+        height: 6rem;
+      }
+    }
+  }
+}
+
+#home {
+
+
+
+
+
+
+
+}

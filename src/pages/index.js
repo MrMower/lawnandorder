@@ -2,8 +2,10 @@ import React from 'react';
 import Link from 'gatsby-link';
 import { Row, Col, Container } from 'reactstrap';
 // import Ohio from '../img/ohio.svg'
-import steven from '../img/steven.jpg';
+import steven from '../img/steven-md.jpg';
+import map from '../img/greenmap2.jpg';
 import wood from '../img/wood.jpg';
+import lawn from '../img/manicured-lawn1.jpg';
 import heart from '../img/heart.svg'
 import leaves from '../img/leaves.svg';
 import grass from '../img/grass.svg';
@@ -14,67 +16,61 @@ import { VertCentRow, Icon } from '../shared';
 
 
 
-const SlidingText = (...words) => (<div className="slidingVertical">{words.map(w=><span>{w}</span>)}</div>)
+//const SlidingText = (...words) => (<div className="slidingVertical">{words.map(w=><span>{w}</span>)}</div>)
 
 const Heart = () => (<img src={heart} alt="love" style={{ width: '100px', height: '100px' }} alt="<3"/>)
 
 const Steven = () => (<img src={steven} style={{ maxWidth: 'initial', width: '250px', height: '250px', borderRadius: '50%' }} />);
+const Map = () => (<img src={map} style={{ maxWidth: 'initial', width: '250px', height: '250px', borderRadius: '50%' }} />);
 
-const Pitch = ({ children }) => (<h1 className="display-3" style={{ textAlign: 'center', color: green, fontStyle: 'italic', whiteSpace: 'nowrap', marginLeft: '-15px' }}>{ children }</h1>);
 
 const PCent = ({ children, style }) => (<p style={ { ...style, textAlign: "center" } }>{ children }</p>)
 
 const Cent = ({ children, style }) => (<div style={{ ...style, textAlign: "center" }}>{ children }</div>)
 
-const More = ({ text }) => (<PCent style={{ textAlign: 'center' }}><a className="btn btn-primary btn-lg" href="#" style={{color: '#FFF' }}role="button">{ text }</a></PCent>)
-
-const SubPitch = ({ children }) => (<PCent style={{ fontSize: '1.25rem', fontWeight: 'bold', textShadow: "3px 3px #FFF" }}>{ children }</PCent>)
-
-
-const Leaves = () => (<img style={{ textAlign: 'center', width: '150px', height: '150px' }} src={leaves} />);
-
-const Grass = () => (<img style={{ textAlign: 'center', width: '150px', height: '150px' }} src={grass} />);
-
-
-const H2 = ({ children, style })=> (<h2 style={{ ...style, fontWeight: 400 }}>{ children }</h2>) 
 
 const Page = () => (
-  <main role="main">
+  <main role="main" id="home">
 
-    <div className="jumbotron" style={{backgroundImage: `url(${wood})` }}>
+    <div className="jumbotron" style={{backgroundImage: `url(${lawn})`, backgroundSize: 'cover' }}>
       <Container >
-        <VertCentRow>
-          <Col>
-            <Steven />
-          </Col>
-          <Col>
-            <Pitch> We <Heart/> grass!</Pitch>
+        <VertCentRow style={{ marginTop: '5rem', marginBottom: '5rem' }}>
+          <Col style={{ transform: 'rotate(-7deg)', paddingBottom: '5rem', paddingTop: '3rem' }}>
+            <h1 className="pitch"> We <Heart/> grass!</h1>
           </Col>
         </VertCentRow>
-        <SubPitch >At Lawn and Order Landscaping, it is our mission to create satisfied customers by delivering superior service, quality products along with integrity and 100% customer satisfaction.</SubPitch>
-        <More text="Learn more &raquo;" />
       </Container>
+        <div className="display-3 sub-pitch">
+          <p>At Lawn and Order Landscaping, it is our mission to create satisfied customers by delivering superior service, quality products along with integrity and 100% customer satisfaction.</p>
+          <div style={{ textAlign: "center" }}>
+            <a className="btn btn-primary btn-lg" 
+              href="#" 
+              style={{color: '#FFF', display: 'none' }}
+              role="button">Learn More &raquo;</a>
+          </div> 
+        </div>
+
     </div>
 
     <div className="container">
-      <div className="row">
+      <div className="row" style={{ textAlign: "center" }}>
         <div className="col-md-4 ">
-          <Cent>
+          <div>
             <Icon src={grass} />
-            <H2>Lawn Care</H2>
-          </Cent>
+            <h2>Lawn Care</h2>
+          </div>
         </div>
         <div className="col-md-4 " >
-          <Cent>
+          <div>
             <Icon src={leaves} />
-            <H2>Autumn Clean up</H2>
-          </Cent>
+            <h2>Autumn Clean up</h2>
+          </div>
         </div>
         <div className="col-md-4 ">
-          <Cent>
+          <div>
             <Icon src={thumb} />
-            <H2>And More!</H2>
-          </Cent>
+            <h2>And More!</h2>
+          </div>
         </div>
       </div>
 
