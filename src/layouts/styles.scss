@@ -9,6 +9,28 @@
 
 #home {
 
+
+  .love {
+    animation: .8s infinite beatHeart;
+  }
+
+  @keyframes beatHeart {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.1);
+    }
+    40% {
+      transform: scale(1);
+    }
+    60% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
   .center {
     text-align: center;
   }
@@ -39,7 +61,9 @@
   .pitch {
     text-align: center;
     //color: #98ca5e;
-
+    border: 3px solid;
+    padding-bottom: 2rem;
+    text-shadow: 2px 2px green;
     color:#FFF;
     white-space: nowrap;
     margin-left: -15px; 
@@ -50,18 +74,52 @@
 }
 
 #services {
+
+  .container-fluid {
+    background: #f9fff7;
+  }
+
+  .column2{
+    //  background: linear-gradient(to right,#d7ffd2,#FFF)
+  }
+  .section2 {
+    padding:0;
+    margin:0;
+
+  }
+  .service-card {
+
+    border: 1px solid #d7ffd2;
+    background: #FFF;
+    padding: 2rem; 
+    margin: 2rem;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px 0px rgba(215,255,210,0.19);
+    h4 {
+      border-left: 3px solid #d7ffd2;
+      padding: 1rem;
+      font-weight: 300;
+      font-size: 1.5rem;
+    }
+    span {
+      color: #98b794;
+      font-style: italic;
+      font-weight: 100;
+    }
+  }
   .hero {
-    //   background: linear-gradient(110deg,#79BB3B,#52B775);
+    background: linear-gradient(110deg,#79BB3B,#52B775);
+    //background: `url(${lawn})`; 
+    //background-size: 'cover';
     color: #FFF;
     //padding: 2rem 2rem 5rem 2rem;
   }
   .hero-title {
-    padding: 2rem;
     font-weight: 100; 
     font-size: 6rem;
-    margin-top: 3rem;
-    transform: rotate(-7deg);
-    margin-bottom: 2rem;
+    margin-top: 4rem;
+    transform: rotate(0deg);
+    //  margin-bottom: 2rem;
     text-shadow: 2px 2px green;
     @include media-breakpoint-down(md) {
       font-size: 4rem;
@@ -79,20 +137,36 @@
       font-size: 1.25rem;
     }
   }
-  .section1 {
+  .section1, .section2 {
     //background: linear-gradient(to right, #ddfff4, #FFF);
     section {
       padding: 10%;
       h3 {
         padding-top: 2rem; 
         padding-bottom: 2rem;
+        .section-title {
+          border-bottom: 2px solid #d7ffd2;
+          padding-bottom: 0.35rem;
+        }
       }
     }
   }
 
+  .tinyicon {
+    margin-right: 1rem;
+    img {
+      padding: 0.25rem;
+      background-color: #dff7c3;
+      border-radius: 100%;
+      width: 50px;
+      height: 50px;
+    }
+  }
+
   .lil-icons{
-    transform: rotate(-7deg);
-    padding-bottom: 5rem;
+    transform: rotate(0deg);
+    margin-top: 4rem;
+    margin-bottom: 6rem;
   }
   .lilicon {
     font-size: 1.25em;
@@ -101,6 +175,7 @@
       padding: 5px;
       margin-left: 1rem;
       background: #FFF;
+
       margin-right: 1em;
       box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.19);
       width: 8rem;

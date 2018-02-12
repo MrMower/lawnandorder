@@ -8,7 +8,7 @@ export const VertCentRow = ({style, children}) => (<Row
       alignItems: 'center',
       justifyContent: 'center',
       textAlign: 'center',
-      marginTop: '50px',
+      marginTop: '0px',
     ...style,
   }}
 >{ children }</Row>)

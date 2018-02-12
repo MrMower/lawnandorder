@@ -18,7 +18,7 @@ import { VertCentRow, Icon } from '../shared';
 
 //const SlidingText = (...words) => (<div className="slidingVertical">{words.map(w=><span>{w}</span>)}</div>)
 
-const Heart = () => (<img src={heart} alt="love" style={{ width: '100px', height: '100px' }} alt="<3"/>)
+const Heart = () => (<img src={heart} alt="love" className="love" style={{ width: '100px', height: '100px' }} alt="<3"/>)
 
 const Steven = () => (<img src={steven} style={{ maxWidth: 'initial', width: '250px', height: '250px', borderRadius: '50%' }} />);
 const Map = () => (<img src={map} style={{ maxWidth: 'initial', width: '250px', height: '250px', borderRadius: '50%' }} />);
@@ -35,7 +35,7 @@ const Page = () => (
     <div className="jumbotron" style={{backgroundImage: `url(${lawn})`, backgroundSize: 'cover' }}>
       <Container >
         <VertCentRow style={{ marginTop: '5rem', marginBottom: '5rem' }}>
-          <Col style={{ transform: 'rotate(-7deg)', paddingBottom: '5rem', paddingTop: '3rem' }}>
+          <Col style={{ transform: 'rotate(-7deg)', paddingBottom: '5rem', paddingTop: '3rem', minWidth: '45em' }}>
             <h1 className="pitch"> We <Heart/> grass!</h1>
           </Col>
         </VertCentRow>

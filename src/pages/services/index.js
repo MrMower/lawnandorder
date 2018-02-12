@@ -2,12 +2,27 @@ import React from 'react';
 import Link from 'gatsby-link';
 import { Row, Col, Container } from 'reactstrap';
 import { VertCentRow, Icon } from '../../shared';
+import mower from '../../img/mower.svg';
+import leaf from '../../img/leaf.svg';
 import lawn from '../../img/manicured-lawn1.jpg';
-import leaves from '../../img/leaves.svg';
-import grass from '../../img/grass.svg';
-import thumb from '../../img/thumbsup.svg';
-import flowers from '../../img/flowers.svg';
+import leaves from '../../img/leaves-mono.svg';
+import grass from '../../img/grass-mono.svg';
+import thumb from '../../img/thumbsup-mono.svg';
+import flowers from '../../img/flowers-mono.svg';
 
+const TinyIcon = ({ src, style }) => (
+  <span className="tinyicon">
+    <img style={ style } src={src} />
+  </span>
+)
+
+const ServiceCard  = ({ style, text, subtext }) =>(
+  <div style={style} className="service-card">
+    <h4>{ text }</h4>
+    <br/>
+    <span>{ subtext }</span>
+  </div>
+)
 const LilIcon = ({ src, style, text }) => (
   <span className="lilicon">
     <span>
@@ -19,7 +34,7 @@ const LilIcon = ({ src, style, text }) => (
 
 module.exports = ()=>(
   <main role="main" id="services">
-    <Container className="hero" fluid style={{ background: `url(${lawn})`, backgroundSize: 'cover' }}>
+    <Container className="hero" fluid style={{}}>
       <VertCentRow style={{ paddingTop: '50px' }}>
         <h1 className="hero-title">
           Meet Our <nobr>5-Star</nobr> Services
@@ -27,8 +42,8 @@ module.exports = ()=>(
       </VertCentRow>
       <VertCentRow style={{ marginTop: 0}}>
         <div className="lil-icons">
-            <LilIcon src={flowers} text="flower bedding" />
-            <LilIcon src={grass} text="mowing" />
+          <LilIcon src={flowers} text="flower bedding" />
+          <LilIcon src={grass} text="mowing" />
           <nobr>
             <LilIcon src={leaves} text="leaf pickup" />
             <LilIcon src={thumb} text="green thumbery" />
@@ -36,7 +51,7 @@ module.exports = ()=>(
         </div>
       </VertCentRow>
       <VertCentRow>
-        <h2 className="hero-subtitle"> We provide a range of services for your commercial and residential needs, no job is too big or too small</h2>
+        <h2 className="hero-subtitle"> We provide a range of services for your commercial and residential needs. <br /> <i>No job is too big or too small!</i></h2>
       </VertCentRow>
     </Container>
     <Container fluid={true}>
@@ -44,7 +59,8 @@ module.exports = ()=>(
         <Col className="section1" xs={12} sm={12} md={6}>
           <section>
             <h3>
-              We specialize in
+              <TinyIcon src={grass}  />
+              <span className="section-title"><nobr>We specialize in ...</nobr> </span>
             </h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel ullamcorper eros. Quisque hendrerit, magna a condimentum dignissim, arcu nulla malesuada nulla, dignissim euismod utrum orci. Ut vel massa ut nulla pulvinar tincidunt at ut ante.</p>
@@ -58,8 +74,24 @@ module.exports = ()=>(
             </p>
           </section>
         </Col>
-        <Col xs={12} sm={12} md={6}>
-          2.
+        <Col className="column2 section2" xs={12} sm={12} md={6}>
+          <section>
+            <h3>
+              <TinyIcon src={thumb}  />
+              <span className="section-title" ><nobr>Our services include ...</nobr></span>
+            </h3>
+            <p>
+              <ServiceCard text="Lawn Mowing" subtext="We come right to your door and"/>
+              <ServiceCard text="Leaf Pickup" />
+              <ServiceCard text="Lorem Ipsum" />
+              <ServiceCard text="Lawn Mowing"/>
+              <ServiceCard text="Leaf Pickup" />
+              <ServiceCard text="Lorem Ipsum" />
+              <ServiceCard text="Lawn Mowing"/>
+              <ServiceCard text="Leaf Pickup" />
+            </p>
+            <ServiceCard text="Lorem Ipsum" />
+          </section>
         </Col>
       </Row>
     </Container>
