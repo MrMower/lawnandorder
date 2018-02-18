@@ -9,6 +9,7 @@ import leaves from '../../img/leaves-mono.svg';
 import grass from '../../img/grass-mono.svg';
 import thumb from '../../img/thumbsup-mono.svg';
 import flowers from '../../img/flowers-mono.svg';
+import star from '../../img/star.svg';
 
 const TinyIcon = ({ src, style }) => (
   <span className="tinyicon">
@@ -16,7 +17,8 @@ const TinyIcon = ({ src, style }) => (
   </span>
 )
 
-const serviceCardData = [{ text:"Mowing" , subtext:"Weekly, Bi-Weekly & Monthly scheduling available"  },
+const serviceCardData = [
+  { text:"Mowing" , subtext:"Weekly, Bi-Weekly & Monthly scheduling available"  },
   { text:"Landscaping" , subtext:"Let us add the nice touch" },
   { text:"Spring & Fall cleanup" , subtext:"Leaves and such" },
   { text:"Tree trimming and Pruning" , subtext:"Branches mannnn...."  },
