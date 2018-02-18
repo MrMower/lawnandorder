@@ -90,14 +90,12 @@ module.exports = ()=>(
               <span className="section-title" >Our services include ...</span>
             </h3>
 
-            <div className="service-cards" style={{ 
-            }}>
-            { serviceCardData.map(ServiceCard) } 
-            <ServiceCard style={{ visibility: "hidden" }} />
-          </div>
-        </section>
-      </Col>
-    </Row>
-  </Container>
-</main>
+            <div className="service-cards">
+              { serviceCardData.map(ServiceCard) } 
+            </div>
+          </section>
+        </Col>
+      </Row>
+    </Container>
+  </main>
 )
