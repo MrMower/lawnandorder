@@ -34,8 +34,8 @@ const Page = () => (
 
     <div className="jumbotron" style={{backgroundImage: `url(${lawn})`, backgroundSize: 'cover' }}>
       <Container >
-        <VertCentRow style={{ marginTop: '5rem', marginBottom: '5rem' }}>
-          <Col style={{ transform: 'rotate(-7deg)', paddingBottom: '5rem', paddingTop: '3rem', minWidth: '45em' }}>
+        <VertCentRow  style={{ marginTop: '5rem', marginBottom: '5rem' }}>
+          <Col className="pitch-head">
             <h1 className="pitch"> We <Heart/> grass!</h1>
           </Col>
         </VertCentRow>

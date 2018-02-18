@@ -45,7 +45,7 @@
     background: rgba(0,0,0,0.3175);
     padding: 2rem;
     padding-top: 1rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
     p {
       text-align: center;
       font-size: 1.75rem;
@@ -57,7 +57,21 @@
   .icons {
     font-weight: 400;
   }
+  .pitch-head {
+    @include media-breakpoint-up(lg) {
+      transform: rotate(-7deg);
+      padding-bottom: 5rem;
+      padding-top: 3rem;
+      min-width: 45em;
+    }
 
+    @include media-breakpoint-down(md) {
+      .pitch {
+        border: 0;
+        padding: 0;
+      }
+    }
+  }
   .pitch {
     text-align: center;
     //color: #98ca5e;
@@ -69,6 +83,13 @@
     margin-left: -15px; 
     font-size: 9rem;
     font-weight: 100;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 6.5rem;
+      white-space: normal;
+      padding: 0;
+      border:0;
+    }
   }
 
 }
@@ -92,14 +113,21 @@
     border: 1px solid #d7ffd2;
     background: #FFF;
     padding: 2rem; 
-    margin: 2rem;
+    margin: 2rem 2rem 2rem 0;
     border-radius: 8px;
     box-shadow: 5px 5px 5px 0px rgba(215,255,210,0.19);
+    @include media-breakpoint-down(md) {
+      margin-left:0;
+      margin-right:0;
+    }
     h4 {
       border-left: 3px solid #d7ffd2;
       padding: 1rem;
       font-weight: 300;
       font-size: 1.5rem;
+      @include media-breakpoint-down(md) {
+        font-size: 1.25rem;
+      }
     }
     span {
       color: #98b794;
@@ -140,11 +168,21 @@
   .section1, .section2 {
     //background: linear-gradient(to right, #ddfff4, #FFF);
     section {
-      padding: 10%;
-      h3 {
+      @include media-breakpoint-down(md) {
+        padding: 8%;
+      }
+      .section-head {
         padding-top: 2rem; 
         padding-bottom: 2rem;
+        @include media-breakpoint-down(md) {
+          display: block;
+          text-align: center;
+          .tinyicon {
+            display: block;
+          }
+        }
         .section-title {
+          white-space: nowrap;
           border-bottom: 2px solid #d7ffd2;
           padding-bottom: 0.35rem;
         }

@@ -58,7 +58,7 @@ module.exports = ()=>(
       <Row>
         <Col className="section1" xs={12} sm={12} md={6}>
           <section>
-            <h3>
+            <h3 className="section-head">
               <TinyIcon src={grass}  />
               <span className="section-title"><nobr>We specialize in ...</nobr> </span>
             </h3>
@@ -76,21 +76,18 @@ module.exports = ()=>(
         </Col>
         <Col className="column2 section2" xs={12} sm={12} md={6}>
           <section>
-            <h3>
+            <h3 className="section-head">
               <TinyIcon src={thumb}  />
-              <span className="section-title" ><nobr>Our services include ...</nobr></span>
+              <span className="section-title" >Our services include ...</span>
             </h3>
-            <p>
-              <ServiceCard text="Lawn Mowing" subtext="We come right to your door and"/>
-              <ServiceCard text="Leaf Pickup" />
-              <ServiceCard text="Lorem Ipsum" />
-              <ServiceCard text="Lawn Mowing"/>
-              <ServiceCard text="Leaf Pickup" />
-              <ServiceCard text="Lorem Ipsum" />
-              <ServiceCard text="Lawn Mowing"/>
-              <ServiceCard text="Leaf Pickup" />
-            </p>
-            <ServiceCard text="Lorem Ipsum" />
+            
+            <div className="service-cards">
+              <ServiceCard text="Mowing" subtext="Weekly, Bi-Weekly & Monthly scheduling available" />
+              <ServiceCard text="Landscaping" subtext="Let us add the nice touch"/>
+              <ServiceCard text="Spring & Fall cleanup" subtext="Leaves and such"/>
+              <ServiceCard text="Tree trimming and Pruning" subtext="Branches mannnn...." />
+              <ServiceCard text="Call now!" />
+            </div>
           </section>
         </Col>
       </Row>
