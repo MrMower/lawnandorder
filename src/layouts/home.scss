@@ -85,6 +85,17 @@
         content: "— ";
       }
     }
+
+    @include media-breakpoint-down(sm) { 
+      &.centered {
+        &:before {
+          content: "" !important;
+        }
+        &:after {
+          content: "" !important;
+        }
+      }
+    }
     font-style: italic;
     color: #6cab65;
     margin: 2rem 0 2em 0;
@@ -223,9 +234,13 @@
     }
   }
 
-  .service-icons h4 {
-    text-align: center;
-    font-weight: 200;
+  .service-icons  {
+    white-space: nowrap;
+    h4 {
+
+      text-align: center;
+      font-weight: 200;
+    }
   }
   .pitch-head {
     @include media-breakpoint-up(lg) {

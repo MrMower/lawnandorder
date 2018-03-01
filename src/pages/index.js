@@ -97,7 +97,7 @@ const Page = () => (
       <header>
         <h3 className="centered">Meet Our 5 Star Services</h3>
       </header>
-      <Row style={{ } }className="service-icons" >
+      <Row className="service-icons" >
         <Col md={3} >
           <div>
             <Icon src={grass} />
@@ -145,9 +145,9 @@ const Page = () => (
               <h3>Here's what people are saying about Lawn and Order Landscaping...</h3>
             </header>
             <Row className="five-star-quotes">
-              <Quote author="Ted from the feed store" img={ ted } text="Steven showed up half naked and bleeding from his eyes, my kinda guy!" />
-              <Quote author="Some woman at Walmart" img={ woman } text="One of the lawn dudes had a weird odor about him, like burning tires and failure, my two favorite scents" />
-              <Quote author="Trapped Man" img={ trapped } text="I have no idea where I am right now please, could someone call for help?" />
+              <Quote author="Paul from Mentor, Ohio" img={ ted } text="Lorem ipsum dolor sit amet, consela et metus vulputate pulvinar nec et tellus. Nam eros nisl, rhoncus ac cursus sit amet," />
+              <Quote author="Sharon from Lakewood, Ohio" img={ woman } text="Lorem ipsum dolor sit nisl, rhoncus ac cursus sit amet," />
+              <Quote author="Jeff from Madison, Ohio" img={ trapped } text="Lorem ipsum dolor sit nisl, rhoncus ac " />
             </Row>
           </section>
         </Col>
