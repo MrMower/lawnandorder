@@ -10,6 +10,8 @@
   .container {
 
   }
+  .jumbotron {
+  }
 
   .payment-section {
     section em:first-of-type {
@@ -18,7 +20,7 @@
     }
     em {
 
- //   color: #6cab65;
+      //   color: #6cab65;
       font-weight: 600;
       text-align: center;
       width: 100%;
@@ -202,6 +204,7 @@
   }
 
   .jumbotron {
+    background: linear-gradient(110deg,#79BB3B,#52B775) !important;
     padding: 0;
     padding-top: 3rem;
     padding-bottom: 0rem;
