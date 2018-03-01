@@ -10,14 +10,82 @@
   .container {
 
   }
-  h3 {
 
+  .payment-section {
+    section em:first-of-type {
+      font-size: 1.5em;
+      margin-bottom: 1em;
+    }
+    em {
+
+ //   color: #6cab65;
+      font-weight: 600;
+      text-align: center;
+      width: 100%;
+      display: inline-block;
+    }
+  }
+
+  .payment-types {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  //$box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.19);
+
+  .leaf-hr {
+    opacity: 0.675;
+    $ratio: 1.24;
+    $width: 30px;
+    $height: $width*$ratio;
+    background: linear-gradient(to right, #fff, #8bc34a, #FFF);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 1px;
+    text-align: center;
+    img {
+      margin: 0;
+      background: #FFF;
+      width: $width;
+      height: $height;
+      margin-top: -1*$height/2;
+      &:after{
+
+      }
+    }
+  }
+
+
+  h3 {
+    width: 100%;
+    margin: 0;
     &:before {
       content: "— ";
     }
+    &.centered {
+      text-align: center;
+      &:after{
+        content: " —";
+      }
+    }
+    &.right {
+      text-align: right;
+      &:before {
+        content: "";
+      }
+      &:after {
+        content: "— ";
+      }
+    }
     font-style: italic;
     color: #6cab65;
-    margin: 2rem;
+    margin: 2rem 0 2em 0;
     display: inline-block;
     font-weight: 200;
     font-size: 1.75em;
@@ -33,49 +101,81 @@
 
     //color: #FFF;
 
-    .quotes {
-      padding-top: 2rem;
-    }
-    blockquote {
-      //box-shadow: 5px 5px 26px 0px rgba(0, 0, 0, 0.125);
-      margin: 1rem;
-      padding: 1rem;
-      &:first-child {
-        margin-top: 3rem;
+    .five-star-quotes {
+      footer {
+        display: inline-block;
+        width: 200px;
+        text-align: center;
       }
+      padding-top: 2rem;
+      .stars {
+        text-align: center;
+        img {
+          width: 25px;
+          height: 35px;
+        }
+      }
+    }
+    .quote-container {
+
+      height: 100%;
+      text-align: center;
+      padding-bottom: 3rem;
       &:nth-child(even) {
-        text-align: right;
+        // text-align: right;
       }
       &:nth-child(right) {
-        text-align: left;
+        //text-align: left;
       }
-      p {
-        &:before, &:after {
-          content: "";
-          display: inline-block;
-          margin-right: 1rem;
-          background: url('../img/quote-open.svg');
-          background-size: cover;
-          $w: 22px;
-          width: $w;
-          height: $w * 1.6;
-        }
-        &:after {
-          transform: rotate(180deg);
-          margin-left: 1rem;
-        }
-        font-size: 1.5rem;
+
+      @include media-breakpoint-down(sm) {
+        text-align: center !important;
 
       }
-      img, .img {
-        display: inline-block;
-        vertical-align: middle;
-        margin: 1rem;
-        background-size: cover;
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        border: 1px solid green;
+      blockquote {
+        box-shadow: 5px 5px 20px 2px rgba(0, 0, 0, 0.06);
+        padding: 2rem;
+        //box-shadow: 5px 5px 26px 0px rgba(0, 0, 0, 0.125);
+        //display: flex;
+        //flex-direction: column;
+        //align-items: center;
+
+        height: 100%;
+        // margin: 1rem;
+        // padding: 1rem;
+        &:first-child {
+          margin-top: 3rem;
+        }
+        p {
+          height: 50%;
+          //flex-grow: 1;
+          &:before, &:after {
+            content: "";
+            display: inline-block;
+            margin-right: 1rem;
+            background: url('../img/quote-open.svg');
+            background-size: cover;
+            $w: 22px;
+            width: $w;
+            height: $w * 1.6;
+          }
+          &:after {
+            transform: rotate(180deg);
+            margin-left: 1rem;
+          }
+          font-size: 1.5rem;
+
+        }
+        .author-img {
+          display: inline-block;
+          vertical-align: middle;
+          margin: 1rem;
+          background-size: cover;
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          border: 1px solid green;
+        }
       }
     }
   }
@@ -112,7 +212,7 @@
     padding: 2rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    p {
+    h2 {
       text-align: center;
       font-size: 1.75rem;
       font-weight: 200;
@@ -126,7 +226,7 @@
   }
   .pitch-head {
     @include media-breakpoint-up(lg) {
-      transform: rotate(-7deg);
+      transform: rotate(-12deg);
       padding-bottom: 5rem;
       padding-top: 3rem;
       min-width: 45em;
@@ -142,7 +242,7 @@
   .pitch {
     text-align: center;
     //color: #98ca5e;
-    border: 3px solid;
+    //border: 3px solid;
     padding-bottom: 2rem;
     text-shadow: 2px 2px green;
     color:#FFF;

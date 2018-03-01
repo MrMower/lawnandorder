@@ -2,6 +2,7 @@
 @import 'bootstrap';
 @import './services';
 @import './home';
+@import './all';
 
 #etphonehome {
   @include media-breakpoint-down(sm) {

@@ -5401,6 +5401,10 @@ path-type@^2.0.0:
   dependencies:
     pify "^2.0.0"
 
+payment-icons@muffinresearch/payment-icons:
+  version "1.0.0"
+  resolved "https://codeload.github.com/muffinresearch/payment-icons/tar.gz/9272706bff37d901db63eb7bc9ad1f4ff3c25872"
+
 pbkdf2-compat@2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/pbkdf2-compat/-/pbkdf2-compat-2.0.1.tgz#b6e0c8fa99494d94e0511575802a59a5c142f288"
