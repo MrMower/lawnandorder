@@ -42,7 +42,7 @@ const Steven = () => (<img src={steven} style={{ maxWidth: 'initial', width: '25
 const Map = () => (<img src={map} style={{ maxWidth: 'initial', width: '250px', height: '250px', borderRadius: '50%' }} />);
 
 
-const LeafsHr = (<LeafHr img={ leafs } imgStyle={ { width: '40px'} }/>)
+const LeafsHr = ()=> (<LeafHr img={ leafs } imgStyle={ { width: '40px'} }/>)
 const LeafHr = ({ style, imgStyle, img = leaf }) => (
   <div className="leaf-hr" style={ {...style } }>
     <img src={img}  style={ { ...imgStyle } } />

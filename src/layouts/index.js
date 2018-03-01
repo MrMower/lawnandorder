@@ -51,25 +51,33 @@ class Navigation extends React.Component {
 }
 
 
-const TemplateWrapper = ({ children }) => (
-  <div>
-    <Helmet
-      title="Lawn and Order"
-      meta={[
-        { name: 'description', content: 'north-east ohio landscaping services and lawn-care' },
-        {/* name: 'keywords', content: 'sample, something' */},
-      ]}
-    />
-    <Navigation />
-    <div
-      style={{
-      }}
-    >
-      {  children() }
+const TemplateWrapper = ({ children }) => {
+  return (
+    <div>
+      <Helmet
+        title="Lawn and Order"
+        meta={[
+          { name: 'description', content: 'north-east ohio landscaping services and lawn-care' },
+          {/* name: 'keywords', content: 'sample, something' */},
+        ]}
+      />
+      <Navigation />
+      <div
+        style={{
+        }}
+      >
+        {  children() }
+      </div>
     </div>
-  </div>
-);
+  );
+}
+
+TemplateWrapper.propTypes = {
+  children: PropTypes.func,
+};
 
 
 
 export default TemplateWrapper;
+
+
