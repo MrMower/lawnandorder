@@ -123,7 +123,7 @@ const Page = () => (
           </div>
         </Col>
       </Row>
-      <LeafHrs img={ leafs } imgStyle={ { width: '40px'} }/>
+      <LeafsHr img={ leafs } imgStyle={ { width: '40px'} }/>
       <Row className="payment-section">
         <Col xs={12}>
           <section>
