@@ -65,14 +65,11 @@ const TemplateWrapper = ({ children }) => (
       style={{
       }}
     >
-      {children()}
+      { /* children() */}
     </div>
   </div>
 );
 
 
-TemplateWrapper.propTypes = {
-  children: PropTypes.func,
-};
 
 export default TemplateWrapper;

@@ -178,4 +178,5 @@ const Page = () => (
   </main>
 );
 
-export default Page;
+
+export default Page ;

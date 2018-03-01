@@ -41,7 +41,7 @@ const LilIcon = ({ src, style, text }) => (
   </span>
 )
 
-module.exports = ()=>(
+const Page = ()=>(
   <main role="main" id="services">
     <Container className="hero" fluid style={{}}>
       <VertCentRow style={{ paddingTop: '50px' }}>
@@ -101,3 +101,4 @@ module.exports = ()=>(
     </Container>
   </main>
 )
+export default Page;
