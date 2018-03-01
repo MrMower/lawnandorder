@@ -65,7 +65,7 @@ const TemplateWrapper = ({ children }) => (
       style={{
       }}
     >
-      { /* children() */}
+      {  children() }
     </div>
   </div>
 );
