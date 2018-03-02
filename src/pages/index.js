@@ -12,22 +12,23 @@ import flowers from '../img/flowers-mono.svg';
 import leaves from '../img/leaves-mono.svg';
 import grass from '../img/grass.svg';
 import thumb from '../img/thumbsup.svg';
-
-import { green } from '../styles/colors';
-import { VertCentRow, Icon } from '../shared';
 import leaf from '../img/leaf.svg';
 import leafs from '../img/leafs.svg';
 import star from '../img/star.svg';
-
 import visa from '../../node_modules/payment-icons/svg/mono/visa.svg';
 import mastercard from '../../node_modules/payment-icons/svg/mono/mastercard-old.svg';
 import amex from '../../node_modules/payment-icons/svg/mono/amex.svg';
 import paypal from '../../node_modules/payment-icons/svg/mono/paypal.svg';
+import quoteopen from '../img/quote-open.svg';
+
+import { green } from '../styles/colors';
+import { VertCentRow, Icon } from '../shared';
+
 
 import woman from '../img/walmartwoman.jpg';
 import ted from '../img/ted.jpg';
 import trapped from '../img/trappedman.jpg';
-import quoteopen from '../img/quote-open.svg';
+
 
 
 //const SlidingText = (...words) => (<div className="slidingVertical">{words.map(w=><span>{w}</span>)}</div>)

@@ -13,6 +13,18 @@ function LeafIcon(props){
   return (<img src={leafIcon} style={{ ...style, width: "30px", padding: 0, marginBottom: '10px', height: "30px" }}/>)
 }
 
+const linkConfig = [ 
+  [ 'Services','/services'], 
+  [ 'Contact', '/contact'], 
+  [ 'About Us','/about-us' ], 
+  [ 'Careers', '/careers'] 
+];
+
+const NavPage = ([label, href]) => (<NavItem><NavLink href={href}>{ label }</NavLink></NavItem>)
+
+const NavPageLinks = ({links}) => (<Nav className="ml-auto" navbar> { links.map(NavPage) } </Nav>)
+
+
 class Navigation extends React.Component {
 
   constructor(props) {
@@ -36,14 +48,7 @@ class Navigation extends React.Component {
         <div style={{"color":"#FFF"}}><a id="etphonehome" href="tel:440-476-3275"></a></div>
         <NavbarToggler onClick={ this.toggle.bind(this) } />
         <Collapse isOpen={this.state.isOpen} navbar>
-          <Nav className="ml-auto" navbar>
-            <NavItem>
-              <NavLink href="/services">Services</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/contact">Contact</NavLink>
-            </NavItem>
-          </Nav>
+          <NavPageLinks links={ linkConfig } />
         </Collapse>
       </Navbar>
     );

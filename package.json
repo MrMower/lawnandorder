@@ -12,7 +12,8 @@
     "gatsby-plugin-styled-components": "^2.0.2",
     "payment-icons": "muffinresearch/payment-icons",
     "reactstrap": "^5.0.0-alpha.3",
-    "styled-components": "^2.2.3"
+    "styled-components": "^2.2.3",
+    "svgr": "^1.8.1"
   },
   "keywords": [
     "gatsby"
