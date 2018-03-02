@@ -3795,6 +3795,12 @@ gatsby-plugin-styled-components@^2.0.2:
   dependencies:
     babel-runtime "^6.26.0"
 
+gatsby-plugin-svgr@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-svgr/-/gatsby-plugin-svgr-0.2.1.tgz#960bbb7d483aa7f7ac5e6ef30f64906611089901"
+  dependencies:
+    svgr "*"
+
 gatsby-react-router-scroll@^1.0.12:
   version "1.0.12"
   resolved "https://registry.yarnpkg.com/gatsby-react-router-scroll/-/gatsby-react-router-scroll-1.0.12.tgz#0fdbea2124f0c2a2496fbc18978a35f1c020b27c"
@@ -8492,7 +8498,7 @@ svgo@^1.0.3:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-svgr@^1.8.1:
+svgr@*, svgr@^1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/svgr/-/svgr-1.8.1.tgz#51e9eac9e9f70cca4511c6f30f8567f77aa3e6da"
   dependencies:

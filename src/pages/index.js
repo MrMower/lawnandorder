@@ -3,10 +3,9 @@ import Link from 'gatsby-link';
 import { Row, Col, Container } from 'reactstrap';
 // import Ohio from '../img/ohio.svg'
 //import steven from '../img/steven-md.jpg';
-import map from '../img/greenmap2.jpg';
-import wood from '../img/wood.jpg';
 import lawn from '../img/manicured-lawn1.jpg';
 import steven from '../img/stevenheadshot-small-sq.jpg';
+
 import heart from '../img/heart.svg'
 import flowers from '../img/flowers-mono.svg';
 import leaves from '../img/leaves-mono.svg';
@@ -15,10 +14,14 @@ import thumb from '../img/thumbsup.svg';
 import leaf from '../img/leaf.svg';
 import leafs from '../img/leafs.svg';
 import star from '../img/star.svg';
-import visa from '../../node_modules/payment-icons/svg/mono/visa.svg';
-import mastercard from '../../node_modules/payment-icons/svg/mono/mastercard-old.svg';
-import amex from '../../node_modules/payment-icons/svg/mono/amex.svg';
-import paypal from '../../node_modules/payment-icons/svg/mono/paypal.svg';
+
+import Visa from '../img/svg-component/visa.svg';
+import Mastercard from '../img/svg-component/mastercard-old.svg';
+import Amex from '../img/svg-component/amex.svg';
+import Paypal from '../img/svg-component/paypal.svg';
+
+
+
 import quoteopen from '../img/quote-open.svg';
 
 import { green } from '../styles/colors';
@@ -29,16 +32,23 @@ import woman from '../img/walmartwoman.jpg';
 import ted from '../img/ted.jpg';
 import trapped from '../img/trappedman.jpg';
 
+const Cards = ()=>{ 
+  const props = { };
+  return (<div>
+  <Visa {...props } />
+  <Mastercard {...props } />
+  <Amex { ...props } />
+  <Paypal  { ...props} />
+  </div>)
+}
+
 
 
 //const SlidingText = (...words) => (<div className="slidingVertical">{words.map(w=><span>{w}</span>)}</div>)
 
 const Heart = () => (<img src={heart} alt="love" className="love" style={{ width: '100px', height: '100px' }} alt="<3"/>)
 
-const PaymentTypes = ()=> (<div className="payment-types">
-  { [visa, mastercard, amex, paypal].map( (src,i) => <img key={i} src={src} /> ) }
-</div>
-)
+const PaymentTypes = ()=> (<div className="payment-types"><Cards /></div>)
 const Steven = () => (<img src={steven} style={{ maxWidth: 'initial', width: '250px', height: '250px', borderRadius: '50%' }} />);
 const Map = () => (<img src={map} style={{ maxWidth: 'initial', width: '250px', height: '250px', borderRadius: '50%' }} />);
 

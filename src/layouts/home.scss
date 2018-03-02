@@ -37,7 +37,8 @@
     //flex-direction: row;
     //justify-content: space-evenly;
     //flex-wrap: wrap;
-    img {
+    svg {
+      height: auto;
       width: 12%;
       display: inline-block;
       text-align: center;
@@ -45,6 +46,9 @@
       margin: 2vw;
       min-width: 52px;
       white-space: nowrap;
+      path {
+        fill: #3d7936;
+      }
     }
   }
   //$box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.19);

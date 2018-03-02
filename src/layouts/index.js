@@ -5,13 +5,13 @@ import Helmet from 'react-helmet';
 import { primary } from '../styles/colors';
 import { light } from '../styles/text';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
-import leafIcon from '../img/leaf.svg';
+import LeafIcon from '../img/svg-component/leaf.svg';
 import './styles.scss';
 
-function LeafIcon(props){
+/*function LeafIcon(props){
   let style =  props.style || {}
   return (<img src={leafIcon} style={{ ...style, width: "30px", padding: 0, marginBottom: '10px', height: "30px" }}/>)
-}
+}*/
 
 const linkConfig = [ 
   [ 'Services','/services'], 
@@ -44,7 +44,7 @@ class Navigation extends React.Component {
   render() { 
     return (
       <Navbar dark expand="md" fixed="top" className="bg-dark">
-        <NavbarBrand href="/"><LeafIcon /> Lawn and Order</NavbarBrand>
+        <NavbarBrand href="/"><LeafIcon className="leafIcon"/> Lawn and Order</NavbarBrand>
         <div style={{"color":"#FFF"}}><a id="etphonehome" href="tel:440-476-3275"></a></div>
         <NavbarToggler onClick={ this.toggle.bind(this) } />
         <Collapse isOpen={this.state.isOpen} navbar>
