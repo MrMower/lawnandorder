@@ -45,7 +45,7 @@ class Navigation extends React.Component {
     return (
       <Navbar dark expand="md" fixed="top" className="bg-dark">
         <NavbarBrand href="/"><LeafIcon className="leafIcon"/> Lawn and Order</NavbarBrand>
-        <div style={{"color":"#FFF"}}><a id="etphonehome" href="tel:440-476-3275"></a></div>
+        <div style={{"color":"#FFF"}}><a id="etphonehome" href="tel:+1-440-476-3275">440.476.3275</a></div>
         <NavbarToggler onClick={ this.toggle.bind(this) } />
         <Collapse isOpen={this.state.isOpen} navbar>
           <NavPageLinks links={ linkConfig } />

@@ -14,7 +14,10 @@ export const VertCentRow = ({style, children}) => (<Row
 >{ children }</Row>)
 
 
-export const Icon = ({ src, style }) => (
+export const Icon = ({ src, style, s=1 }) => { 
+  let size = `${(s * 150)}px`;
+  return (
   <div style={{ textAlign: 'center', width: '100%' }}>
-    <img style={{ textAlign: 'center', width: '150px', height: '150px' }} src={src} />
+    <img style={{ textAlign: 'center', width: size, height: size }} src={src} />
   </div>) 
+}

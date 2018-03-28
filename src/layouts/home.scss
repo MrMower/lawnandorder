@@ -1,5 +1,25 @@
 
+#etphonehome {
+    color: gold;
+    font-weight: 100;
+    font-size: 1.25rem;
+  &:hover {
+
+    color: #FFF;
+  }
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
 #home {
+  .pnumber {
+    margin-top: 1rem;
+    color: gold;
+    font-weight: 100;
+    font-size: 1.25rem;
+    width: 100%;
+    text-align: center;
+  }
 
 
   font-weight: 200;
@@ -7,47 +27,94 @@
     animation: .8s infinite beatHeart;
   }
 
+  .serving, .serve-state, h2 {
+    display:inline-block;
+    vertical-align: middle;
+  }
+  .serving {
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+  }
+
+  .ohio-gps {
+    text-align: center;
+    svg {
+      transform: rotate(-10deg); 
+    }
+    &.light svg {
+      width: 100px;
+      height: 100px;
+      path {
+        stroke: #FFF;
+        stroke-width: 10;
+      }
+      &> path {
+        stroke: none;
+      }
+    }
+  }
+
   .container {
 
   }
   .jumbotron {
+    background-image: url('../img/springgreen.jpg');
+    background-size: cover;
   }
 
   .payment-section {
-    section em:first-of-type {
+    $pay-color:  #88AAAA;
+    $email-color: #6cab65;
+    .pay-pitch {
       font-size: 1.5em;
       margin-bottom: 1em;
     }
     em {
-
-      //   color: #6cab65;
+      color: $pay-color;
       font-weight: 600;
       text-align: center;
       width: 100%;
       display: inline-block;
     }
-  }
 
-  .payment-types {
-    margin: 0;
-    text-align: center;
-    width: 100%;
-    overflow: hidden;
-    //display: flex;
-    //flex-direction: row;
-    //justify-content: space-evenly;
-    //flex-wrap: wrap;
-    svg {
-      height: auto;
-      width: 12%;
-      display: inline-block;
+
+    .i-email {
       text-align: center;
-      max-width: 80px;
-      margin: 2vw;
-      min-width: 52px;
-      white-space: nowrap;
-      path {
-        fill: #3d7936;
+      width: 100%;
+      svg {
+        width: 100%;
+        height: 100px;
+        path {
+          stroke: $email-color;
+        }
+      }
+      em {
+        color: $email-color;
+      }
+    }
+
+    .payment-types {
+      margin: 0;
+      text-align: center;
+      width: 100%;
+      overflow: hidden;
+      //display: flex;
+      //flex-direction: row;
+      //justify-content: space-evenly;
+      //flex-wrap: wrap;
+      svg {
+        height: auto;
+        width: 12%;
+        display: inline-block;
+        text-align: center;
+        max-width: 80px;
+        margin: 2vw;
+        min-width: 52px;
+        white-space: nowrap;
+        path {
+          fill: $pay-color;
+        }
       }
     }
   }
@@ -160,20 +227,13 @@
       blockquote {
         box-shadow: 5px 5px 20px 2px rgba(0, 0, 0, 0.06);
         padding: 2rem;
-        //box-shadow: 5px 5px 26px 0px rgba(0, 0, 0, 0.125);
-        //display: flex;
-        //flex-direction: column;
-        //align-items: center;
 
         height: 100%;
-        // margin: 1rem;
-        // padding: 1rem;
         &:first-child {
           margin-top: 3rem;
         }
         p {
           height: 50%;
-          //flex-grow: 1;
           &:before, &:after {
             content: "";
             display: inline-block;
@@ -239,18 +299,21 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
     h2 {
+
       text-align: center;
-      font-size: 1.75rem;
+      font-size: 1.35rem;
       font-weight: 200;
       color: #FFF;
+      em {
+      }
     }
   }
 
   .service-icons  {
     white-space: nowrap;
     h4 {
-
       text-align: center;
+      font-size: 1rem;
       font-weight: 200;
     }
   }
@@ -271,8 +334,6 @@
   }
   .pitch {
     text-align: center;
-    //color: #98ca5e;
-    //border: 3px solid;
     padding-bottom: 2rem;
     text-shadow: 2px 2px green;
     color:#FFF;

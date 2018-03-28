@@ -15,16 +15,22 @@ import leaf from '../img/leaf.svg';
 import leafs from '../img/leafs.svg';
 import star from '../img/star.svg';
 
+import Ohio from '../img/svg-component/ohiogps.svg';
 import Visa from '../img/svg-component/visa.svg';
 import Mastercard from '../img/svg-component/mastercard-old.svg';
 import Amex from '../img/svg-component/amex.svg';
 import Paypal from '../img/svg-component/paypal.svg';
+import EmailIcon from '../img/svg-component/icon-email.svg';
 
 
 
 import quoteopen from '../img/quote-open.svg';
 
-import { green } from '../styles/colors';
+//<div style={{ display: "none" }}>Your local business and residential lawn-care specialist</div>
+//
+//p
+/* <h2>At Lawn and Order Landscaping, it is our mission to create satisfied customers by delivering superior service, quality products along with integrity and 100% customer satisfaction.</h2> */ 
+
 import { VertCentRow, Icon } from '../shared';
 
 
@@ -32,13 +38,31 @@ import woman from '../img/walmartwoman.jpg';
 import ted from '../img/ted.jpg';
 import trapped from '../img/trappedman.jpg';
 
+const BigOhioSection = ()=>(<div><Container fluid>
+    <header>
+      <h3><em>Serving Lake County &amp; North-Eastern Ohio</em></h3>
+    </header>
+    <Row>
+      <div className="ohio-gps dark">
+        <Ohio />
+      </div>
+    </Row>
+</Container><LeafsHr /></div>)
+
+const CallNow = ()=>(<div style={{ textAlign: "center" }}>
+  <a className="btn btn-primary btn-lg" 
+    href="#" 
+    style={{color: '#FFF', display: '' }}
+    role="button">Call Now &raquo;</a>
+  </div>)
+
 const Cards = ()=>{ 
   const props = { };
   return (<div>
-  <Visa {...props } />
-  <Mastercard {...props } />
-  <Amex { ...props } />
-  <Paypal  { ...props} />
+    <Visa {...props } />
+    <Mastercard {...props } />
+    <Amex { ...props } />
+    <Paypal  { ...props} />
   </div>)
 }
 
@@ -83,7 +107,7 @@ const Fivestars = ()=> (<div className="stars"> { [1,2,3,4,5].map(i=>(<img src={
 const Page = () => (
   <main role="main" id="home">
 
-    <div className="jumbotron" style={{backgroundImage: `url(${lawn})`, backgroundSize: 'cover' }}>
+    <div className="jumbotron">
       <Container >
         <VertCentRow  style={{ marginTop: '5rem', marginBottom: '5rem' }}>
           <Col className="pitch-head">
@@ -92,59 +116,61 @@ const Page = () => (
         </VertCentRow>
       </Container>
       <div className="display-3 sub-pitch">
-        <h2>At Lawn and Order Landscaping, it is our mission to create satisfied customers by delivering superior service, quality products along with integrity and 100% customer satisfaction.</h2>
-        <div style={{ textAlign: "center" }}>
-          <a className="btn btn-primary btn-lg" 
-            href="#" 
-            style={{color: '#FFF', display: 'none' }}
-            role="button">Learn More &raquo;</a>
-        </div> 
+        <div className="serving">
+          <div className="ohio-gps light serve-state" ><Ohio/></div>
+          <h2><em>&mdash; Serving Mentor, Lake County and North-Eastern Ohio</em></h2>
+        </div>
+        <CallNow />
+        <div className="pnumber"> +1.440.476.3275 </div>
       </div>
 
     </div>
 
     <Container fluid>
-
       <header>
         <h3 className="centered">Meet Our 5 Star Services</h3>
       </header>
       <Row className="service-icons" >
         <Col md={3} >
           <div>
-            <Icon src={grass} />
+            <Icon src={grass} s={0.5}/>
             <h4>Lawn Care</h4>
           </div>
         </Col>
         <Col md={3} >
           <div>
-            <Icon src={leaves} />
+            <Icon src={leaves} s={0.5}/>
             <h4>Autumn Clean up</h4>
           </div>
         </Col>
         <Col md={3} >
           <div>
-            <Icon src={flowers} />
+            <Icon src={flowers} s={0.5} />
             <h4>Flower Bedding</h4>
           </div>
         </Col>
         <Col md={3} >
           <div>
-            <Icon src={thumb} />
+            <Icon src={thumb} s={0.5} />
             <h4>And more!</h4>
           </div>
         </Col>
       </Row>
-      <LeafsHr img={ leafs } imgStyle={ { width: '40px'} }/>
+      <LeafsHr imgStyle={ { width: '40px'} }/>
       <Row className="payment-section">
         <Col xs={12}>
           <section>
             <header>
-              <h3 className="centered">Quick and Easy online billing</h3>
+              <h3 className="centered">Quick and Easy online electronic billing</h3>
             </header>
+            <div className="i-email">
+              <EmailIcon/>
+              <em>Pay online - We'll send your invoice right to your email inbox</em>
+            </div>
             <PaymentTypes />
-            <em>We accept Cash, Visa, Mastercard, Discover and Paypal</em>
+            <em className="pay-pitch">We accept Cash, Visa, Mastercard, Discover and Paypal</em>
+
             <em>We offer automatic no-fuss weekly, bi-weekly and monthly payment plans</em>
-            <em>Or have us send your invoice right to your inbox!</em>
           </section>
         </Col>
       </Row>
