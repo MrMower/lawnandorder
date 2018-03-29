@@ -21,7 +21,7 @@ import Mastercard from '../img/svg-component/mastercard-old.svg';
 import Amex from '../img/svg-component/amex.svg';
 import Paypal from '../img/svg-component/paypal.svg';
 import EmailIcon from '../img/svg-component/icon-email.svg';
-
+import { phoneNumber } from '../data/anything.json';
 
 
 import quoteopen from '../img/quote-open.svg';
@@ -51,7 +51,7 @@ const BigOhioSection = ()=>(<div><Container fluid>
 
 const CallNow = ()=>(<div style={{ textAlign: "center" }}>
   <a className="btn btn-primary btn-lg" 
-    href="#" 
+    href={`tel:${phoneNumber}`}
     style={{color: '#FFF', display: '' }}
     role="button">Call Now &raquo;</a>
   </div>)
@@ -115,13 +115,13 @@ const Page = () => (
           </Col>
         </VertCentRow>
       </Container>
-      <div className="display-3 sub-pitch">
+      <div className="sub-pitch">
         <div className="serving">
           <div className="ohio-gps light serve-state" ><Ohio/></div>
           <h2><em>&mdash; Serving Mentor, Lake County and North-Eastern Ohio</em></h2>
         </div>
         <CallNow />
-        <div className="pnumber"> +1.440.476.3275 </div>
+        <a className="phone-number" href={`tel:${phoneNumber}`}>{ `${phoneNumber}` }</a>
       </div>
 
     </div>
