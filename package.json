@@ -16,7 +16,9 @@
     "gatsby-transformer-json": "^1.0.16",
     "glamorous": "^4.12.1",
     "payment-icons": "muffinresearch/payment-icons",
+    "react-slick": "^0.22.3",
     "reactstrap": "^5.0.0-alpha.3",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^2.2.3",
     "svgr": "^1.8.1"
   },

@@ -15,16 +15,17 @@ import leaf from '../img/leaf.svg';
 import leafs from '../img/leafs.svg';
 import star from '../img/star.svg';
 
+import scissors from '../img/scissors.svg';
 import Ohio from '../img/svg-component/ohiogps.svg';
 import Visa from '../img/svg-component/visa.svg';
 import Mastercard from '../img/svg-component/mastercard-old.svg';
 import Amex from '../img/svg-component/amex.svg';
 import Paypal from '../img/svg-component/paypal.svg';
-import EmailIcon from '../img/svg-component/icon-email.svg';
+import EmailIcon from '../img/svg-component/emailat.svg';
 import { phoneNumber } from '../data/anything.json';
+import logoimg from '../img/A-laao-small.png';
 
 
-import quoteopen from '../img/quote-open.svg';
 
 //<div style={{ display: "none" }}>Your local business and residential lawn-care specialist</div>
 //
@@ -37,6 +38,29 @@ import { VertCentRow, Icon } from '../shared';
 import woman from '../img/walmartwoman.jpg';
 import ted from '../img/ted.jpg';
 import trapped from '../img/trappedman.jpg';
+
+import quoteopen from '../img/quote-open.svg';
+
+
+
+
+const Testimony = ()=> (<Row className="testimony">
+  <Col xs={12}>
+    <section>
+      <header>
+        <h3>Hear what people are saying about Lawn and Order Landscaping...</h3>
+      </header>
+      <Row className="five-star-quotes">
+        <Quote author="Paul from Mentor, Ohio" img={ ted } text="Lorem ipsum dolor sit amet, consela et metus vulputate pulvinar nec et tellus. Nam eros nisl, rhoncus ac cursus sit amet," />
+        <Quote author="Sharon from Lakewood, Ohio" img={ woman } text="Lorem ipsum dolor sit nisl, rhoncus ac cursus sit amet," />
+        <Quote author="Jeff from Madison, Ohio" img={ trapped } text="Lorem ipsum dolor sit nisl, rhoncus ac " />
+      </Row>
+      
+    </section>
+  </Col>
+  </Row>
+)
+
 
 const BigOhioSection = ()=>(<div><Container fluid>
     <header>
@@ -58,11 +82,11 @@ const CallNow = ()=>(<div style={{ textAlign: "center" }}>
 
 const Cards = ()=>{ 
   const props = { };
-  return (<div>
-    <Visa {...props } />
-    <Mastercard {...props } />
-    <Amex { ...props } />
-    <Paypal  { ...props} />
+  return (<div className='pay'>
+    <Visa className='pay-visa' {...props } />
+    <Mastercard className='pay-master' {...props } />
+    <Amex className='pay-amex'{ ...props } />
+    <Paypal  className='pay-paypal'{ ...props} />
   </div>)
 }
 
@@ -118,7 +142,7 @@ const Page = () => (
       <div className="sub-pitch">
         <div className="serving">
           <div className="ohio-gps light serve-state" ><Ohio/></div>
-          <h2><em>&mdash; Serving Mentor, Lake County and North-Eastern Ohio</em></h2>
+          <h2><em>&mdash; Serving Mentor Lake County and North-Eastern Ohio</em></h2>
         </div>
         <CallNow />
         <a className="phone-number" href={`tel:${phoneNumber}`}>{ `${phoneNumber}` }</a>
@@ -127,36 +151,54 @@ const Page = () => (
     </div>
 
     <Container fluid>
+      <Row >
+        <Col md={12}>
+        </Col>
+      </Row>
       <header>
         <h3 className="centered">Meet Our 5 Star Services</h3>
       </header>
       <Row className="service-icons" >
-        <Col md={3} >
+        <Col md={2} >
           <div>
             <Icon src={grass} s={0.5}/>
             <h4>Lawn Care</h4>
           </div>
         </Col>
-        <Col md={3} >
+        <Col md={2} >
           <div>
             <Icon src={leaves} s={0.5}/>
             <h4>Autumn Clean up</h4>
           </div>
         </Col>
-        <Col md={3} >
+        <Col md={2} >
+          <div>
+            <Icon src={leafs} s={0.5}/>
+            <h4>Spring Spruce up</h4>
+          </div>
+        </Col>
+        <Col md={2} >
           <div>
             <Icon src={flowers} s={0.5} />
             <h4>Flower Bedding</h4>
           </div>
         </Col>
-        <Col md={3} >
+        <Col md={2} >
+          <div>
+            <Icon src={scissors} s={0.5} />
+            <h4>Trimming &amp; Pruning</h4>
+          </div>
+        </Col>
+        <Col md={2} >
           <div>
             <Icon src={thumb} s={0.5} />
             <h4>And more!</h4>
           </div>
         </Col>
       </Row>
-      <LeafsHr imgStyle={ { width: '40px'} }/>
+      <LeafHr />
+      <Testimony />
+      <LeafsHr />
       <Row className="payment-section">
         <Col xs={12}>
           <section>
@@ -165,27 +207,13 @@ const Page = () => (
             </header>
             <div className="i-email">
               <EmailIcon/>
-              <em>Pay online - We'll send your invoice right to your email inbox</em>
             </div>
             <PaymentTypes />
-            <em className="pay-pitch">We accept Cash, Visa, Mastercard, Discover and Paypal</em>
-
-            <em>We offer automatic no-fuss weekly, bi-weekly and monthly payment plans</em>
-          </section>
-        </Col>
-      </Row>
-      <LeafHr style={ { marginBottom: '-31px' } } imgStyle={ { background: 'initial' }} />
-      <Row className="testimony">
-        <Col xs={12}>
-          <section>
-            <header>
-              <h3>Here's what people are saying about Lawn and Order Landscaping...</h3>
-            </header>
-            <Row className="five-star-quotes">
-              <Quote author="Paul from Mentor, Ohio" img={ ted } text="Lorem ipsum dolor sit amet, consela et metus vulputate pulvinar nec et tellus. Nam eros nisl, rhoncus ac cursus sit amet," />
-              <Quote author="Sharon from Lakewood, Ohio" img={ woman } text="Lorem ipsum dolor sit nisl, rhoncus ac cursus sit amet," />
-              <Quote author="Jeff from Madison, Ohio" img={ trapped } text="Lorem ipsum dolor sit nisl, rhoncus ac " />
-            </Row>
+            <span className="pay-pitch">We accept $ Cash, Visa, Mastercard, Discover and Paypal
+              <br/>
+              &amp;
+              <br/>
+              One-time, Weekly, Bi-Weekly and monthly payment plans &mdash; <em>ask about our subscription discounts!</em> </span>
           </section>
         </Col>
       </Row>
@@ -207,6 +235,16 @@ const Page = () => (
                 </Col>
               </Row>
             </div>
+          </section>
+        </Col>
+      </Row>
+      <LeafsHr />
+      <Row className="contact">
+        <Col xs={12}>
+          <section>
+            <header>
+              <h3 className="centered">Estimates / Jobs / Contact Us</h3>
+            </header>
           </section>
         </Col>
       </Row>

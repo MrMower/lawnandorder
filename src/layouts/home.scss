@@ -1,8 +1,10 @@
 
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 #etphonehome {
-    color: gold;
-    font-weight: 100;
-    font-size: 1.25rem;
+  color: gold;
+  font-weight: 300;
+  font-size: 1.25rem;
   &:hover {
 
     color: #FFF;
@@ -11,12 +13,13 @@
     display: none;
   }
 }
+
 #home {
   .phone-number {
     display: inline-block;
     margin-top: 1rem;
     color: gold;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 1.25rem;
     width: 100%;
     text-align: center;
@@ -65,15 +68,27 @@
   }
 
   .payment-section {
-    $pay-color:  #88AAAA;
-    $email-color: #6cab65;
     .pay-pitch {
-      font-size: 1.5em;
       margin-bottom: 1em;
     }
-    em {
-      color: $pay-color;
-      font-weight: 600;
+    .pay {
+      .pay-visa path {
+        fill: #4579c1;
+      }
+      .pay-master path {
+        fill: #ec845c;
+      }
+      .pay-amex path {
+        fill: #4FB2E7;
+
+      }
+      .pay-paypal path {
+        fill: #9ca1c3;
+      }
+    }
+    span {
+      color: #3d7936; // #88AAAA;
+      font-weight: 400;
       text-align: center;
       width: 100%;
       display: inline-block;
@@ -86,12 +101,13 @@
       svg {
         width: 100%;
         height: 100px;
-        path {
-          stroke: $email-color;
+        g:first-of-type + path, g:nth-of-type(2) path, g:nth-of-type(2) + path {
+          fill: #3d7936;
         }
-      }
-      em {
-        color: $email-color;
+        path:first-child {
+          fill:#8bc34a;
+        } 
+
       }
     }
 
@@ -100,26 +116,18 @@
       text-align: center;
       width: 100%;
       overflow: hidden;
-      //display: flex;
-      //flex-direction: row;
-      //justify-content: space-evenly;
-      //flex-wrap: wrap;
       svg {
         height: auto;
-        width: 12%;
+        width: 5%;
         display: inline-block;
         text-align: center;
         max-width: 80px;
         margin: 2vw;
         min-width: 52px;
         white-space: nowrap;
-        path {
-          fill: $pay-color;
-        }
       }
     }
   }
-  //$box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.19);
 
   .leaf-hr {
     opacity: 0.675;
@@ -185,7 +193,7 @@
     text-align: left;
   }
   .testimony {
-    margin-top: 2rem;
+    margin-top: -50px;
     background: linear-gradient(#f9fff7, 50%, #FFF);
 
     h3 {
@@ -305,8 +313,6 @@
       font-size: 1.35rem;
       font-weight: 200;
       color: #FFF;
-      em {
-      }
     }
   }
 
@@ -320,13 +326,14 @@
   }
   .pitch-head {
     @include media-breakpoint-up(lg) {
-      transform: rotate(-12deg);
+      transform: rotate(-10deg);
       padding-bottom: 5rem;
       padding-top: 3rem;
       min-width: 45em;
     }
 
     @include media-breakpoint-down(md) {
+
       .pitch {
         border: 0;
         padding: 0;
