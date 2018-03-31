@@ -1,6 +1,7 @@
 
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
+
 #etphonehome {
   color: gold;
   font-weight: 300;
@@ -63,7 +64,20 @@
 
   }
   .jumbotron {
-    background-image: url('../img/springgreen.jpg');
+    @include media-breakpoint-up(xs) {  
+      background-image: url('../img/springgreen-425-tryoptimizegood.jpg');
+    }
+    @include media-breakpoint-up(md) {  
+      background-image: url('../img/springgreen-768-tryoptimizegood.jpg');
+    }
+    @include media-breakpoint-up(lg) {  
+      background-image: url('../img/springgreen-1024-tryoptimizegood.jpg');
+    }
+
+   // @include media-breakpoint-down(xs) {  
+   //   background-image: url('../img/springgreen-425-50compressed.jpg');
+   // }
+    //background-image: url('../img/springgreen.jpg');
     background-size: cover;
   }
 

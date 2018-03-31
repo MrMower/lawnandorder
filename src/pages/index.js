@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Link from 'gatsby-link';
 import { Row, Col, Container } from 'reactstrap';
 // import Ohio from '../img/ohio.svg'
@@ -26,11 +27,17 @@ import { phoneNumber } from '../data/anything.json';
 import logoimg from '../img/A-laao-small.png';
 
 
+//https://www.youtube.com/watch?v=zhM6C0P7VO0
+//https://github.com/gatsbyjs/gatsby/tree/master/examples/using-gatsby-image
+
 
 //<div style={{ display: "none" }}>Your local business and residential lawn-care specialist</div>
 //
 //p
 /* <h2>At Lawn and Order Landscaping, it is our mission to create satisfied customers by delivering superior service, quality products along with integrity and 100% customer satisfaction.</h2> */ 
+
+
+//https://www.gatsbyjs.org/packages/gatsby-image/#two-types-of-responsive-images
 
 import { VertCentRow, Icon } from '../shared';
 
@@ -55,10 +62,10 @@ const Testimony = ()=> (<Row className="testimony">
         <Quote author="Sharon from Lakewood, Ohio" img={ woman } text="Lorem ipsum dolor sit nisl, rhoncus ac cursus sit amet," />
         <Quote author="Jeff from Madison, Ohio" img={ trapped } text="Lorem ipsum dolor sit nisl, rhoncus ac " />
       </Row>
-      
+
     </section>
   </Col>
-  </Row>
+</Row>
 )
 
 
@@ -71,14 +78,14 @@ const BigOhioSection = ()=>(<div><Container fluid>
         <Ohio />
       </div>
     </Row>
-</Container><LeafsHr /></div>)
+  </Container><LeafsHr /></div>)
 
 const CallNow = ()=>(<div style={{ textAlign: "center" }}>
   <a className="btn btn-primary btn-lg" 
     href={`tel:${phoneNumber}`}
     style={{color: '#FFF', display: '' }}
     role="button">Call Now &raquo;</a>
-  </div>)
+</div>)
 
 const Cards = ()=>{ 
   const props = { };
@@ -130,8 +137,7 @@ const Fivestars = ()=> (<div className="stars"> { [1,2,3,4,5].map(i=>(<img src={
 
 const Page = () => (
   <main role="main" id="home">
-
-    <div className="jumbotron">
+    <div  className="jumbotron">
       <Container >
         <VertCentRow  style={{ marginTop: '5rem', marginBottom: '5rem' }}>
           <Col className="pitch-head">
@@ -159,37 +165,37 @@ const Page = () => (
         <h3 className="centered">Meet Our 5 Star Services</h3>
       </header>
       <Row className="service-icons" >
-        <Col md={2} >
+        <Col lg={2} md={4} >
           <div>
             <Icon src={grass} s={0.5}/>
             <h4>Lawn Care</h4>
           </div>
         </Col>
-        <Col md={2} >
+        <Col lg={2} md={4}>
           <div>
             <Icon src={leaves} s={0.5}/>
             <h4>Autumn Clean up</h4>
           </div>
         </Col>
-        <Col md={2} >
+        <Col lg={2}  md={4} >
           <div>
             <Icon src={leafs} s={0.5}/>
             <h4>Spring Spruce up</h4>
           </div>
         </Col>
-        <Col md={2} >
+        <Col lg={2}   md={4} >
           <div>
             <Icon src={flowers} s={0.5} />
             <h4>Flower Bedding</h4>
           </div>
         </Col>
-        <Col md={2} >
+        <Col lg={2} md={4} >
           <div>
             <Icon src={scissors} s={0.5} />
             <h4>Trimming &amp; Pruning</h4>
           </div>
         </Col>
-        <Col md={2} >
+        <Col lg={2} md={4} >
           <div>
             <Icon src={thumb} s={0.5} />
             <h4>And more!</h4>
