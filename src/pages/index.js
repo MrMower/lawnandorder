@@ -42,9 +42,11 @@ import logoimg from '../img/A-laao-small.png';
 import { VertCentRow, Icon } from '../shared';
 
 
-import woman from '../img/walmartwoman.jpg';
-import ted from '../img/ted.jpg';
-import trapped from '../img/trappedman.jpg';
+//import Female from '../img/svg-component/female.svg';
+//import Male from '../img/svg-component/male.svg';
+
+import female from '../img/female.svg';
+import male from '../img/male.svg';
 
 import quoteopen from '../img/quote-open.svg';
 
@@ -58,9 +60,9 @@ const Testimony = ()=> (<Row className="testimony">
         <h3>Hear what people are saying about Lawn and Order Landscaping...</h3>
       </header>
       <Row className="five-star-quotes">
-        <Quote author="Paul from Mentor, Ohio" img={ ted } text="Lorem ipsum dolor sit amet, consela et metus vulputate pulvinar nec et tellus. Nam eros nisl, rhoncus ac cursus sit amet," />
-        <Quote author="Sharon from Lakewood, Ohio" img={ woman } text="Lorem ipsum dolor sit nisl, rhoncus ac cursus sit amet," />
-        <Quote author="Jeff from Madison, Ohio" img={ trapped } text="Lorem ipsum dolor sit nisl, rhoncus ac " />
+        <Quote author="Paul S. from Mentor, Ohio" img={ male } text="Steven helped me greatly. I was selling my house and he gave me just what I needed. Great service and a reasonable price." />
+        <Quote author="Sharon P. from Mayfield, Ohio" img={ female } text="Very Impressed! On-time, quick, detailed and effecient. My husband and I are very particular about our yard, and we are very impressed" />
+        <Quote author="Jeff T. from Chesterland, Ohio" img={ male } text="Steven has done work for me on several of my homes.  In each case he was within the budget, on time and did a stellar job.  Very much would recommend!" />
       </Row>
 
     </section>
@@ -151,7 +153,7 @@ const Page = () => (
           <h2><em>&mdash; Serving Mentor Lake County and North-Eastern Ohio</em></h2>
         </div>
         <CallNow />
-        <a className="phone-number" href={`tel:${phoneNumber}`}>{ `${phoneNumber}` }</a>
+        <a className="phone-number" href={`tel:${phoneNumber}`}><em>Booking now for 2018</em></a>
       </div>
 
     </div>

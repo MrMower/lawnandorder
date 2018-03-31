@@ -49,7 +49,6 @@ class Navigation extends React.Component {
         <div style={{"color":"#FFF"}}><a id="etphonehome" href={`tel:${phoneNumber}`}>{`${phoneNumber}`}</a></div>
         <NavbarToggler onClick={ this.toggle.bind(this) } />
         <Collapse isOpen={this.state.isOpen} navbar>
-          <NavPageLinks links={ linkConfig } />
         </Collapse>
       </Navbar>
     );
