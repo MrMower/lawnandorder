@@ -14,12 +14,7 @@ import { phoneNumber } from '../data/anything.json';
   return (<img src={leafIcon} style={{ ...style, width: "30px", padding: 0, marginBottom: '10px', height: "30px" }}/>)
 }*/
 
-const linkConfig = [ 
-  [ 'Services','/services'], 
-  [ 'Contact', '/contact'], 
-  [ 'About Us','/about-us' ], 
-  [ 'Careers', '/careers'] 
-];
+const linkConfig = [ ];
 
 const NavPage = ([label, href]) => (<NavItem><NavLink href={href}>{ label }</NavLink></NavItem>)
 
@@ -49,6 +44,7 @@ class Navigation extends React.Component {
         <div style={{"color":"#FFF"}}><a id="etphonehome" href={`tel:${phoneNumber}`}>{`${phoneNumber}`}</a></div>
         <NavbarToggler onClick={ this.toggle.bind(this) } />
         <Collapse isOpen={this.state.isOpen} navbar>
+          <NavPageLinks links={ linkConfig } />
         </Collapse>
       </Navbar>
     );
