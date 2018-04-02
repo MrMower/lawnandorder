@@ -27,7 +27,9 @@ import Amex from '../img/svg-component/amex.svg';
 import Paypal from '../img/svg-component/paypal.svg';
 import EmailIcon from '../img/svg-component/emailat.svg';
 import logoimg from '../img/A-laao-small.png';
-const phoneNumber  ='1.440.476.3275';//'../data/anything.json';
+
+
+const phoneNumber  ='1.440.476.3275';
 const emailContact = 'lawn.order.ohio@gmail.com';
 
 
@@ -54,7 +56,10 @@ import male from '../img/male.svg';
 
 import quoteopen from '../img/quote-open.svg';
 
-const ContactForm = ()=> (<Form name="submitContactInfo" >
+const ContactForm = ()=> (<Form 
+  method="POST"
+  data-netlify="true"
+  name="contact-form">
   <p style={{ display: "none" }}>
     <label>Don’t fill this out, it is to detect spam <input name="spam-bot-field" /></label>
   </p>
@@ -114,7 +119,7 @@ const ContactForm = ()=> (<Form name="submitContactInfo" >
       <Button color="primary" style={{color: '#FFF' }} type="submit">Submit</Button>
     </Col>
   </FormGroup>
-  </Form>)
+</Form>)
 
 class ContactFormDynamic extends React.Component {
 
@@ -235,7 +240,7 @@ const Testimony = ()=> (<Row className="testimony">
 
     </section>
   </Col>
-  </Row>
+</Row>
 )
 
 
@@ -248,14 +253,14 @@ const BigOhioSection = ()=>(<div><Container fluid>
         <Ohio />
       </div>
     </Row>
-  </Container><LeafsHr /></div>)
+</Container><LeafsHr /></div>)
 
 const CallNow = ()=>(<div style={{ textAlign: "center" }}>
   <a className="btn btn-primary btn-lg" 
     href={`tel:${phoneNumber}`}
     style={{color: '#FFF', display: '' }}
     role="button">Call Now &raquo;</a>
-  </div>)
+</div>)
 
 const Cards = ()=>{ 
   const props = { };
@@ -308,7 +313,7 @@ const PCent = ({ children, style }) => (<p style={ { ...style, textAlign: "cente
 
 const Cent = ({ children, style }) => (<div style={{ ...style, textAlign: "center" }}>{ children }</div>)
 
-const Fivestars = ()=> (<div className="stars"> { [1,2,3,4,5].map(i=>(<img src={star} />)) }</div>)
+const Fivestars = ()=> (<div className="stars"> {  (Array(5).fill(0)).map(i=>(<img src={star} />)) }</div>)
 
 const Page = () => (
   <main role="main" id="home">
@@ -449,7 +454,7 @@ const Page = () => (
         <p className="centered">We are available by telephone M-F 9am-5:30pm<br />
           <em>Give us a call @ { phoneNumber }</em>
           <br />
-          Email anytime &mdash; <a href={`mailto:{${emailContact}}`}>{ emailContact }</a>
+          Email anytime &mdash; <a href={`mailto:${emailContact}`}>{ emailContact }</a>
           <br />
         </p>
       </section>
@@ -458,9 +463,9 @@ const Page = () => (
       <ContactForm />
     </Col>
   </Row>
-  </Container>
+</Container>
 
-</main>
+  </main>
 );
 
 
