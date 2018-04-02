@@ -28,7 +28,7 @@ import Paypal from '../img/svg-component/paypal.svg';
 import EmailIcon from '../img/svg-component/emailat.svg';
 import logoimg from '../img/A-laao-small.png';
 const phoneNumber  ='1.440.476.3275';//'../data/anything.json';
-const emailContact = 'lawn.and.order@gmail.com';
+const emailContact = 'lawn.order.ohio@gmail.com';
 
 
 //https://www.youtube.com/watch?v=zhM6C0P7VO0
@@ -396,7 +396,7 @@ const Page = () => (
               <br/>
               &amp;
               <br/>
-              One-time, Weekly, Bi-Weekly and monthly payment plans &mdash; <em>ask about our subscription discounts!</em> </span>
+              One-time, Weekly, Bi-Weekly and monthly payment plans &mdash; <em>ask about our discount plans!</em> </span>
           </section>
         </Col>
       </Row>
