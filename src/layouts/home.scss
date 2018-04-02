@@ -150,6 +150,9 @@
     $width: 30px;
     $height: $width*$ratio;
     background: linear-gradient(to right, #fff, #8bc34a, #FFF);
+    &.no-line img {
+      background: 'initial';
+    }
     margin-top: 50px;
     margin-bottom: 50px;
     height: 1px;

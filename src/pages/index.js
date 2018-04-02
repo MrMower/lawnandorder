@@ -120,7 +120,7 @@ const ContactForm = ()=> (<Form
       <Button color="primary" style={{color: '#FFF' }} type="submit">Submit</Button>
     </Col>
   </FormGroup>
-</Form>)
+  </Form>)
 
 class ContactFormDynamic extends React.Component {
 
@@ -227,9 +227,8 @@ class ContactFormDynamic extends React.Component {
 
 }
 
-const Testimony = ()=> (<Row className="testimony">
-  <Col xs={12}>
-    <section>
+const Testimony = ()=> (<section><Row className="testimony">
+    <Col xs={12}>
       <header>
         <h3>Hear what people are saying about Lawn and Order Landscaping...</h3>
       </header>
@@ -238,10 +237,9 @@ const Testimony = ()=> (<Row className="testimony">
         <Quote author="Sharon P. from Mayfield, Ohio" img={ female } text="Very Impressed! On-time, quick, detailed and effecient. My husband and I are very particular about our yard, and we are very impressed" />
         <Quote author="Jeff T. from Chesterland, Ohio" img={ male } text="Steven has done work for me on several of my homes.  In each case he was within the budget, on time and did a stellar job.  Very much would recommend!" />
       </Row>
-
-    </section>
-  </Col>
-</Row>
+    </Col>
+  </Row>
+</section>
 )
 
 
@@ -254,14 +252,14 @@ const BigOhioSection = ()=>(<div><Container fluid>
         <Ohio />
       </div>
     </Row>
-</Container><LeafsHr /></div>)
+  </Container><LeafsHr /></div>)
 
 const CallNow = ()=>(<div style={{ textAlign: "center" }}>
   <a className="btn btn-primary btn-lg" 
     href={`tel:${phoneNumber}`}
     style={{color: '#FFF', display: '' }}
     role="button">Call Now &raquo;</a>
-</div>)
+  </div>)
 
 const Cards = ()=>{ 
   const props = { };
@@ -289,9 +287,13 @@ const CircleImg = ({ src }) => (<img src={src} style={{ maxWidth: 'initial', wid
 const Map = () => (<img src={map} style={{ maxWidth: 'initial', width: '250px', height: '250px', borderRadius: '50%' }} />);
 
 
-const LeafsHr = ()=> (<LeafHr img={ leafs } imgStyle={ { width: '40px'} }/>)
+const LeafsHr = (props)=> (<LeafHr
+  { ...props }
+  img={ leafs } 
+  imgStyle={ { ...props.imgStyle, width: '40px'} }
+/>)
 const LeafHr = ({ style, imgStyle, img = leaf }) => (
-  <div className="leaf-hr" style={ {...style } }>
+  <div className="leaf-hr" style={ { ...style } }>
     <img src={img}  style={ { ...imgStyle } } />
   </div>
 )
@@ -329,7 +331,7 @@ const Page = () => (
       <div className="sub-pitch">
         <div className="serving">
           <div className="ohio-gps light serve-state" ><Ohio/></div>
-          <h2><em>&mdash; Serving Mentor, Lake County and all of North Eastern Ohio</em></h2>
+          <h2><em>&mdash; Located in Mentor Ohio - Serving Lake County and all of North Eastern Ohio</em></h2>
         </div>
         <CallNow />
         <a className="phone-number mobile-hide" href={`tel:${phoneNumber}`}><em>Booking now for 2018</em></a>
@@ -340,76 +342,76 @@ const Page = () => (
     </div>
 
     <Container fluid>
-      <Row >
-        <Col md={12}>
-        </Col>
-      </Row>
-      <header>
-        <h3 className="centered">Meet Our 5 Star Services</h3>
-      </header>
-      <Row className="service-icons" >
-        <Col lg={2} md={4} >
-          <div>
-            <Icon src={grass} s={0.5}/>
-            <h4>Lawn Care</h4>
-          </div>
-        </Col>
-        <Col lg={2} md={4}>
-          <div>
-            <Icon src={leaves} s={0.5}/>
-            <h4>Autumn Clean up</h4>
-          </div>
-        </Col>
-        <Col lg={2}  md={4} >
-          <div>
-            <Icon src={leafs} s={0.5}/>
-            <h4>Spring Spruce up</h4>
-          </div>
-        </Col>
-        <Col lg={2}   md={4} >
-          <div>
-            <Icon src={flowers} s={0.5} />
-            <h4>Flower Bedding</h4>
-          </div>
-        </Col>
-        <Col lg={2} md={4} >
-          <div>
-            <Icon src={scissors} s={0.5} />
-            <h4>Trimming &amp; Pruning</h4>
-          </div>
-        </Col>
-        <Col lg={2} md={4} >
-          <div>
-            <Icon src={thumb} s={0.5} />
-            <h4>And more!</h4>
-          </div>
-        </Col>
-      </Row>
+      <section>
+        <header>
+          <h3 className="centered">Meet Our 5 Star Services</h3>
+        </header>
+        <Row className="service-icons" >
+          <Col lg={2} md={4} >
+            <div>
+              <Icon src={grass} s={0.5}/>
+              <h4>Lawn Care</h4>
+            </div>
+          </Col>
+          <Col lg={2} md={4}>
+            <div>
+              <Icon src={leaves} s={0.5}/>
+              <h4>Autumn Clean up</h4>
+            </div>
+          </Col>
+          <Col lg={2}  md={4} >
+            <div>
+              <Icon src={leafs} s={0.5}/>
+              <h4>Spring Spruce up</h4>
+            </div>
+          </Col>
+          <Col lg={2}   md={4} >
+            <div>
+              <Icon src={flowers} s={0.5} />
+              <h4>Flower Bedding</h4>
+            </div>
+          </Col>
+          <Col lg={2} md={4} >
+            <div>
+              <Icon src={scissors} s={0.5} />
+              <h4>Trimming &amp; Pruning</h4>
+            </div>
+          </Col>
+          <Col lg={2} md={4} >
+            <div>
+              <Icon src={thumb} s={0.5} />
+              <h4>And more!</h4>
+            </div>
+          </Col>
+        </Row>
+      </section>
       <LeafHr />
       <Testimony />
       <LeafsHr />
-      <Row className="payment-section">
-        <Col xs={12}>
-          <section>
-            <header>
-              <h3 className="centered">Quick and Easy online electronic billing</h3>
-            </header>
-            <div className="i-email">
-              <EmailIcon/>
-            </div>
-            <PaymentTypes />
-            <span className="pay-pitch">We accept $ Cash, Visa, Mastercard, Discover and Paypal
-              <br/>
-              &amp;
-              <br/>
-              One-time, Weekly, Bi-Weekly and monthly payment plans &mdash; <em>ask about our discount plans!</em> </span>
-          </section>
-        </Col>
-      </Row>
+      <section>
+        <Row className="payment-section">
+          <Col xs={12}>
+            <section>
+              <header>
+                <h3 className="centered">Quick and Easy online electronic billing</h3>
+              </header>
+              <div className="i-email">
+                <EmailIcon/>
+              </div>
+              <PaymentTypes />
+              <span className="pay-pitch">We accept $ Cash, Visa, Mastercard, Discover and Paypal
+                <br/>
+                &amp;
+                <br/>
+                One-time, Weekly, Bi-Weekly and monthly payment plans &mdash; <em>ask about our discount plans!</em> </span>
+            </section>
+          </Col>
+        </Row>
+      </section>
       <LeafHr />
-      <Row className="aboutus">
-        <Col xs={12}>
-          <section>
+      <section>
+        <Row className="aboutus">
+          <Col xs={12}>
             <header>
               <h3 className="centered">Meet your neighborhood lawn care specialist</h3>
             </header>
@@ -442,34 +444,40 @@ const Page = () => (
             </Col>
           </Row>
         </div>
-      </section>
-    </Col>
-  </Row>
-  <LeafsHr />
-  <Row className="contact">
-    <Col xs={12}>
-      <section>
-        <header>
-          <h3 className="centered" id="contactus">Estimates / Careers / Contact Us</h3>
-        </header>
-        <p className="centered">We are available by telephone - M-F 9am-5:30pm<br />
-          <em>Give us a call @ { phoneNumber }</em>
-          <br />
-          Email anytime &mdash; <a href={`mailto:${emailContact}`}>{ emailContact }</a>
-          <br />
-          or
-          <br />
-          Please, fill out this form and we will get back to you within 48hrs.
-        </p>
-      </section>
-    </Col>
-    <Col xs={12} md={{ size: 6, offset: 3}}>
-      <ContactForm />
-    </Col>
-  </Row>
-</Container>
+      </Col>
+    </Row>
+  </section>
 
-  </main>
+  <LeafsHr />
+  <section id="contactus">
+  <br />
+  <br />
+    <Row className="contact">
+      <Col xs={12}>
+        <h3 className="centered">Estimates / Careers / Contact Us</h3>
+      </Col>
+    </Row>
+    <Row>
+      <Col md={{ size: 5, offset: 4 }} xs={12} >
+        <span>&mdash; We are available by telephone - M-F 9am-5:30pm</span>
+        <ul>
+          <li><em>Call us @ <a href={`tel:${phoneNumber}`}>{phoneNumber}</a></em></li>
+          <li><a href="https://www.facebook.com/Lawn-Order-Landscaping-LLC-719546044898978/">Find us on Facebook</a></li>
+          <li>Email anytime &mdash; <a href={`mailto:${emailContact}`}>{ emailContact }</a></li>
+          <li>You may also fill out the form below and we will get try to get back to you within 24hrs.</li>
+        </ul>
+      </Col>
+    </Row>
+    <LeafsHr style={{ background: 'initial' }}/>
+    <Row>
+      <Col xs={12} md={{ size: 6, offset: 3}}>
+        <ContactForm />
+      </Col>
+    </Row>
+  </section>
+  </Container>
+
+</main>
 );
 
 

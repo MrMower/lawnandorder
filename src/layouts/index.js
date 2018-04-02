@@ -57,12 +57,19 @@ class Navigation extends React.Component {
   }
 }
 
-
+const title = "Lawn and Order Landscaping";
+const description = 'Your neighborhood lawn care specialist and providing you with a solution to all of your business and residential landscaping needs. We provide fast, friendly, dependable and affordable service. Proudly serving Mentor, Lake Country and all of North Eastern Ohio';
 const TemplateWrapper = ({ children }) => (<div>
   <Helmet
-    title="Lawn and Order"
+    title={title}
     meta={[
-      { name: 'description', content: 'Let us be your neighborhood lawn care specialist and provide you with solution to all of your business and  residential landscaping needs. We provide fast, friendly, dependable and affordable service. Proudly serving Mentor, Lake Country and all of North Eastern Ohio' },
+      { name: 'description', content: description },
+      { name: 'twitter:card', content: 'summary' },
+      { name: 'twitter:title', content: title },
+      { name: 'og:title', content: title },
+      { name: 'og:image', content: 'https://lawn-and-order.com/lawn-and-order-ohio.jpg' },
+      { name: 'og:description', content: description },
+      { name: 'og:type', content: 'website' },
     ]}
   />
   <Navigation />
