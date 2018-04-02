@@ -62,8 +62,7 @@ const TemplateWrapper = ({ children }) => (<div>
   <Helmet
     title="Lawn and Order"
     meta={[
-      { name: 'description', content: 'north-east ohio landscaping services and lawn-care' },
-      {/* name: 'keywords', content: 'sample, something' */},
+      { name: 'description', content: 'Let us be your neighborhood lawn care specialist and provide you with solution to all of your business and  residential landscaping needs. We provide fast, friendly, dependable and affordable service. Proudly serving Mentor, Lake Country and all of North Eastern Ohio' },
     ]}
   />
   <Navigation />

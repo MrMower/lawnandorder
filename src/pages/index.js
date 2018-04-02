@@ -111,7 +111,7 @@ const ContactForm = ()=> (<Form
   <Row>
     <Col sm={{size: 10, offset: 2}}>
       <FormText color="muted">
-        *** If applying for a job please paste the text of your resume, or send an email to {emailContact}
+        *** If applying for a job please paste the text of your resume, or send an email with it attached to {emailContact}
       </FormText>
     </Col>
   </Row>
@@ -452,11 +452,14 @@ const Page = () => (
         <header>
           <h3 className="centered" id="contactus">Estimates / Careers / Contact Us</h3>
         </header>
-        <p className="centered">We are available by telephone M-F 9am-5:30pm<br />
+        <p className="centered">We are available by telephone - M-F 9am-5:30pm<br />
           <em>Give us a call @ { phoneNumber }</em>
           <br />
           Email anytime &mdash; <a href={`mailto:${emailContact}`}>{ emailContact }</a>
           <br />
+          or
+          <br />
+          Please, fill out this form and we will get back to you within 48hrs.
         </p>
       </section>
     </Col>
