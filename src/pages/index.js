@@ -65,6 +65,11 @@ const ContactForm = ()=> (<Form
     <label>Don’t fill this out, it is to detect spam <input name="bot-field" /></label>
   </p>
   <FormGroup row>
+    <Col xs={12}>
+      <h4>&mdash; Contact Us Form</h4>
+    </Col>
+  </FormGroup>
+  <FormGroup row>
     <Label for="name" sm={2}>Name:</Label>
     <Col sm={10}>
       <Input type="text"
