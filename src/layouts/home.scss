@@ -15,7 +15,18 @@
   }
 }
 
+/*html {
+  background-color: #3d7936;
+  body, main, body .container-fluid {
+    background-color: #FFF;
+  }
+}*/
 #home {
+
+  .centered { 
+    text-align: center;
+  }
+
   .phone-number {
     display: inline-block;
     margin-top: 1rem;
@@ -24,6 +35,17 @@
     font-size: 1.25rem;
     width: 100%;
     text-align: center;
+
+    &.mobile-show{
+      @include media-breakpoint-up(md) {
+        display: none;
+      }
+    }
+    &.mobile-hide{
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
   }
 
 
@@ -60,12 +82,6 @@
     }
   }
 
-  .container {
-
-  }
-  .jumbotron {
-  }
-
   .payment-section {
     .pay-pitch {
       margin-bottom: 1em;
@@ -87,7 +103,7 @@
     }
     span {
       color: #3d7936; // #88AAAA;
-      font-weight: 400;
+      font-weight: 200;
       text-align: center;
       width: 100%;
       display: inline-block;
@@ -158,7 +174,6 @@
       content: "— ";
     }
     &.centered {
-      text-align: center;
       &:after{
         content: " —";
       }
@@ -238,10 +253,15 @@
 
         height: 100%;
         &:first-child {
-          margin-top: 3rem;
+          margin-top: 0;
+          @include media-breakpoint-up(sm) {
+            margin-top: 3rem;
+          }
         }
         p {
-          height: 50%;
+          @include media-breakpoint-up(sm) {
+            height: 50%;
+          }
           &:before, &:after {
             content: "";
             display: inline-block;
@@ -256,7 +276,9 @@
             transform: rotate(180deg);
             margin-left: 1rem;
           }
-          font-size: 1.5rem;
+          @include media-breakpoint-down(sm) {
+            font-size: 1rem;
+          }
 
         }
         .author-img {
@@ -382,7 +404,8 @@
       border-radius: 50%;
     }
     .subimgrow {
-        margin-top: -100px !important;
+      margin-top: -100px !important;
+      //     overflow-x: hidden;
       .subimg {
         &.left {
           float: right;
@@ -423,6 +446,9 @@
         border: 0;
       }
     }
+  }
+  form div.row.form-group:last-child {
+    margin-top: 1rem;
   }
 
 }
