@@ -58,10 +58,11 @@ import quoteopen from '../img/quote-open.svg';
 
 const ContactForm = ()=> (<Form 
   method="POST"
-  data-netlify="true"
+  netlify-honeypot="bot-field"
+  netlify
   name="contact-form">
   <p style={{ display: "none" }}>
-    <label>Don’t fill this out, it is to detect spam <input name="spam-bot-field" /></label>
+    <label>Don’t fill this out, it is to detect spam <input name="bot-field" /></label>
   </p>
   <FormGroup row>
     <Label for="name" sm={2}>Name:</Label>
