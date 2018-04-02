@@ -308,9 +308,9 @@
       background-image: url('../img/springgreen-1024-tryoptimizegood.jpg');
     }
 
-   // @include media-breakpoint-down(xs) {  
-   //   background-image: url('../img/springgreen-425-50compressed.jpg');
-   // }
+    // @include media-breakpoint-down(xs) {  
+    //   background-image: url('../img/springgreen-425-50compressed.jpg');
+    // }
     //background-image: url('../img/springgreen.jpg');
     background-size: cover;
 
@@ -381,6 +381,33 @@
     img {
       border-radius: 50%;
     }
+    .subimgrow {
+        margin-top: -100px !important;
+      .subimg {
+        &.left {
+          float: right;
+          margin-right: 5rem;
+          right: 10px, 
+        }
+        &.right {
+          float: left;
+          margin-left: 5rem;
+          left: 10px, 
+        }
+      }
+      @include media-breakpoint-down(sm) {
+        margin: 0;
+        height: 200px;
+        margin-top: -110px !important;
+        .subimg {
+          opacity: 0.75;
+          z-index:-1;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+          position: absolute;
+        }
+      }
+    }
     .img {
       display: inline-block;
       vertical-align: middle;
@@ -390,6 +417,11 @@
       height: 200px;
       border-radius: 50%;
       border: 1px solid green;
+      &.subimg {
+        width: 150px;
+        height: 150px;
+        border: 0;
+      }
     }
   }
 
