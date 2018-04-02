@@ -51,7 +51,7 @@ class Navigation extends React.Component {
       <Navbar dark expand="md" fixed="top" className="bg-dark">
         <NavbarBrand href="/"><LeafIcon className="leafIcon" /> Lawn and Order</NavbarBrand>
         <div style={{ 'color': '#FFF' }}><a id="etphonehome" href={`tel:${phoneNumber}`}>{`${phoneNumber}`}</a></div>
-          <NavPageLinks links={ linkConfig } />
+        <NavPageLinks links={ linkConfig } />
       </Navbar>
     );
   }
@@ -63,6 +63,10 @@ const TemplateWrapper = ({ children }) => (<div>
   <Helmet
     title={title}
     meta={[
+      {
+        name: 'google-site-verification', 
+        content:'jMLMhA1MsaE7dX3YIFJpWNjgfiT8dYetAydAcAgvAzY'
+      },
       { name: 'description', content: description },
       { name: 'twitter:card', content: 'summary' },
       { name: 'twitter:title', content: title },
