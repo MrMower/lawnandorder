@@ -150,16 +150,13 @@
     $width: 30px;
     $height: $width*$ratio;
     background: linear-gradient(to right, #fff, #8bc34a, #FFF);
-    &.no-line img {
-      background: 'initial';
-    }
     margin-top: 50px;
     margin-bottom: 50px;
     height: 1px;
     text-align: center;
     img {
       margin: 0;
-      background: #FFF;
+      //background: #FFF;
       width: $width;
       height: $height;
       margin-top: -1*$height/2;
@@ -239,16 +236,9 @@
       height: 100%;
       text-align: center;
       padding-bottom: 3rem;
-      &:nth-child(even) {
-        // text-align: right;
-      }
-      &:nth-child(right) {
-        //text-align: left;
-      }
 
       @include media-breakpoint-down(sm) {
         text-align: center !important;
-
       }
       blockquote {
         box-shadow: 5px 5px 20px 2px rgba(0, 0, 0, 0.06);
@@ -262,8 +252,12 @@
           }
         }
         p {
+          font-size: 1.5rem;
           @include media-breakpoint-up(sm) {
             height: 50%;
+          }
+          @include media-breakpoint-down(sm) {
+           font-size: 1rem;
           }
           &:before, &:after {
             content: "";
@@ -278,9 +272,6 @@
           &:after {
             transform: rotate(180deg);
             margin-left: 1rem;
-          }
-          @include media-breakpoint-down(sm) {
-            font-size: 1rem;
           }
 
         }
@@ -426,7 +417,6 @@
         height: 200px;
         margin-top: -110px !important;
         .subimg {
-          opacity: 0.75;
           z-index:-1;
           margin-left: 0 !important;
           margin-right: 0 !important;
@@ -442,7 +432,7 @@
       width: 200px;
       height: 200px;
       border-radius: 50%;
-      border: 1px solid green;
+      border: 4px solid #FFF;
       &.subimg {
         width: 150px;
         height: 150px;

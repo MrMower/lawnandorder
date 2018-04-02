@@ -59,7 +59,7 @@ import quoteopen from '../img/quote-open.svg';
 const ContactForm = ()=> (<Form 
   method="POST"
   netlify-honeypot="bot-field"
-  netlify
+  data-netlify="true"
   name="contact-form">
   <p style={{ display: "none" }}>
     <label>Don’t fill this out, it is to detect spam <input name="bot-field" /></label>
@@ -77,7 +77,7 @@ const ContactForm = ()=> (<Form
     </Col>
   </FormGroup>
   <FormGroup row>
-    <Label for="email" sm={2}>Email</Label>
+    <Label for="email" sm={2}>Email:</Label>
     <Col sm={10}>
       <Input 
         type="email" 
@@ -85,14 +85,14 @@ const ContactForm = ()=> (<Form
     </Col>
   </FormGroup>
   <FormGroup row>
-    <Label for="phone" sm={2}>Phone</Label>
+    <Label for="phone" sm={2}>Phone:</Label>
     <Col sm={10}>
       <Input type="tel" name="phone" 
         id="phone" placeholder="Phone" />
     </Col>
   </FormGroup>
   <FormGroup row>
-    <Label sm={2} for="reason">Reason</Label>
+    <Label sm={2} for="reason">Reason:</Label>
     <Col sm={10}>
       <Input 
         type="select" 
@@ -104,7 +104,7 @@ const ContactForm = ()=> (<Form
     </Col>
   </FormGroup>
   <FormGroup row>
-    <Label sm={2} for="message">Message</Label>
+    <Label sm={2} for="message">Message:</Label>
     <Col sm={10}>
       <Input type="textarea" style={{ height: '150px' }} 
         name="message" id="message" />
@@ -339,7 +339,7 @@ const Page = () => (
           <h2><em>&mdash; Located in Mentor Ohio - Serving Lake County and all of North Eastern Ohio</em></h2>
         </div>
         <CallNow />
-        <a className="phone-number mobile-hide" href={`tel:${phoneNumber}`}><em>Booking now for 2018</em></a>
+        <a className="phone-number mobile-hide" href={`tel:${phoneNumber}`}><em>Booking now for 2018!</em></a>
         <a className="phone-number mobile-show" href={`tel:${phoneNumber}`}><em>{phoneNumber}</em></a>
 
       </div>
@@ -454,7 +454,7 @@ const Page = () => (
   </section>
 
   <LeafsHr />
-  <section id="contactus">
+  <section id="contact-us">
   <br />
   <br />
     <Row className="contact">

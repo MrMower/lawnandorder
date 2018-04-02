@@ -15,7 +15,7 @@ import { phoneNumber } from '../data/anything.json';
   style={{ ...style, width: "30px", padding: 0, marginBottom: '10px', height: "30px" }}/>)
 }*/
 
-const linkConfig = [['Contact Us',"#contactus"]];
+const linkConfig = [['Contact Us',"#contact-us"]];
 
 const NavPage = ([label, href]) => (<NavItem><NavLink href={href}>{ label }</NavLink></NavItem>);
 
