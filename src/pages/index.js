@@ -125,7 +125,7 @@ const ContactForm = ()=> (<Form
       <Button color="primary" style={{color: '#FFF' }} type="submit">Submit</Button>
     </Col>
   </FormGroup>
-  </Form>)
+</Form>)
 
 class ContactFormDynamic extends React.Component {
 
@@ -244,7 +244,7 @@ const Testimony = ()=> (<section><Row className="testimony">
       </Row>
     </Col>
   </Row>
-</section>
+  </section>
 )
 
 
@@ -257,14 +257,14 @@ const BigOhioSection = ()=>(<div><Container fluid>
         <Ohio />
       </div>
     </Row>
-  </Container><LeafsHr /></div>)
+</Container><LeafsHr /></div>)
 
 const CallNow = ()=>(<div style={{ textAlign: "center" }}>
   <a className="btn btn-primary btn-lg" 
     href={`tel:${phoneNumber}`}
     style={{color: '#FFF', display: '' }}
     role="button">Call Now &raquo;</a>
-  </div>)
+</div>)
 
 const Cards = ()=>{ 
   const props = { };
@@ -336,7 +336,7 @@ const Page = () => (
       <div className="sub-pitch">
         <div className="serving">
           <div className="ohio-gps light serve-state" ><Ohio/></div>
-          <h2><em>&mdash; Located in Mentor Ohio - Serving Lake County and all of North Eastern Ohio</em></h2>
+          <h2><em>&mdash; Providing  service for business and residential lawn care and landscaping needs to Mentor, Lake County and North Eastern Ohio</em></h2>
         </div>
         <CallNow />
         <a className="phone-number mobile-hide" href={`tel:${phoneNumber}`}><em>Booking now for 2018!</em></a>
@@ -392,7 +392,7 @@ const Page = () => (
       </section>
       <LeafHr />
       <Testimony />
-      <LeafsHr />
+      <LeafHr />
       <section>
         <Row className="payment-section">
           <Col xs={12}>
@@ -413,7 +413,7 @@ const Page = () => (
           </Col>
         </Row>
       </section>
-      <LeafHr />
+      <LeafsHr />
       <section>
         <Row className="aboutus">
           <Col xs={12}>
@@ -453,10 +453,10 @@ const Page = () => (
     </Row>
   </section>
 
-  <LeafsHr />
+  <LeafHr />
   <section id="contact-us">
-  <br />
-  <br />
+    <br />
+    <br />
     <Row className="contact">
       <Col xs={12}>
         <h3 className="centered">Estimates / Careers / Contact Us</h3>
@@ -480,9 +480,9 @@ const Page = () => (
       </Col>
     </Row>
   </section>
-  </Container>
+</Container>
 
-</main>
+  </main>
 );
 
 
