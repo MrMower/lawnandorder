@@ -317,7 +317,8 @@ background-color: #FFF;
 
 
     background-color: #8bc34a;
-    @include media-breakpoint-up(xs) {  
+    background-image: url('../img/springgreen-special.jpg');
+    /*@include media-breakpoint-up(xs) {  
       background-image: url('../img/springgreen-425-tryoptimizegood.jpg');
     }
     @include media-breakpoint-up(md) {  
@@ -325,7 +326,7 @@ background-color: #FFF;
     }
     @include media-breakpoint-up(lg) {  
       background-image: url('../img/springgreen-1024-tryoptimizegood.jpg');
-    }
+    }*/
 
     // @include media-breakpoint-down(xs) {  
     //   background-image: url('../img/springgreen-425-50compressed.jpg');
