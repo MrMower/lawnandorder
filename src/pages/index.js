@@ -127,110 +127,6 @@ const ContactForm = ()=> (<Form
   </FormGroup>
 </Form>)
 
-class ContactFormDynamic extends React.Component {
-
-  constructor() {
-    super();
-    this.state = {
-      reason: null,
-      email: null,
-      name: null,
-      file: null,
-      message: null,
-      showFile: false
-    };
-  }
-  submitContact(e) { 
-    if (this.state.reason === 'Jobs' && !this.state.file && !confirm('No file attachment, Would you like to continue?')) {
-      e.preventDefault();
-      return;
-    }
-  }
-  fieldChange({ target }) {
-    const { name, value } = target;
-    if (name === 'reason') {
-      if (value === 'Jobs') {
-        this.setState({ showFile: true });
-      }
-      else {
-        this.setState({ showFile: false });
-      }
-    }
-    this.setState({ [name]: value });
-  }
-
-  render(){ 
-    return (<Form onSubmit={this.submitContact.bind(this)}>
-      <Input style={{ display: "none" }} type="text" name="spam" id="spam" />
-      <FormGroup row>
-        <Label for="name" sm={2}>Name:</Label>
-        <Col sm={10}>
-          <Input type="text"
-            onChange={ this.fieldChange.bind(this) } 
-            name="name" id="name" placeholder="Name" />
-        </Col>
-      </FormGroup>
-      <FormGroup row>
-        <Label for="email" sm={2}>Email</Label>
-        <Col sm={10}>
-          <Input 
-            type="email" 
-            onChange={ this.fieldChange.bind(this) } 
-            name="email" id="email" placeholder="@" />
-        </Col>
-      </FormGroup>
-      <FormGroup row>
-        <Label for="phone" sm={2}>Phone</Label>
-        <Col sm={10}>
-          <Input type="tel" name="phone" 
-            onChange={ this.fieldChange.bind(this) } 
-            id="phone" placeholder="Phone" />
-        </Col>
-      </FormGroup>
-      <FormGroup row>
-        <Label sm={2} for="reason">Reason</Label>
-        <Col sm={10}>
-          <Input 
-            type="select" 
-            onChange={ this.fieldChange.bind(this) } 
-            name="reason"  id="reason">
-            <option>Estimate</option>
-            <option>Jobs</option>
-            <option>Other</option>
-          </Input>
-        </Col>
-      </FormGroup>
-      <FormGroup row>
-        <Label sm={2} for="message">Message</Label>
-        <Col sm={10}>
-          <Input type="textarea" style={{ height: '150px' }} 
-            onChange={ this.fieldChange.bind(this) } 
-            name="message" id="message" />
-        </Col>
-
-      </FormGroup>
-      <FormGroup row style={{ display: (!this.state.showFile) ? 'none' : '' }}>
-        <Label sm={2} for="exampleFile">Attachment</Label>
-        <Col sm={10}>
-          <Input type="file" 
-            onChange={ this.fieldChange.bind(this) } 
-            name="file" id="exampleFile" />
-          <FormText color="muted">
-            Please attach your resume, PDF format is preferable.
-          </FormText>
-        </Col>
-      </FormGroup>
-      <FormGroup row>
-        <Col sm={{ size: 10, offset: 2 }}>
-          <Button type="submit" onClick={this.submitContact.bind(this)}>Submit</Button>
-        </Col>
-      </FormGroup>
-    </Form>)
-
-
-  }
-
-}
 
 const Testimony = ()=> (<section><Row className="testimony">
     <Col xs={12}>
@@ -280,7 +176,7 @@ const Cards = ()=>{
 
 //const SlidingText = (...words) => (<div className="slidingVertical">{words.map(w=><span>{w}</span>)}</div>)
 
-const Heart = () => (<img src={heart} alt="love" className="love" style={{ width: '100px', height: '100px' }} alt="<3"/>)
+const Heart = () => (<img src={heart} alt="love" className="love" style={{ width: '100px', color: 'red', height: '100px' }}/>)
 
 const PaymentTypes = ()=> (<div className="payment-types"><Cards /></div>)
 
@@ -297,6 +193,7 @@ const LeafsHr = (props)=> (<LeafHr
   img={ leafs } 
   imgStyle={ { ...props.imgStyle, width: '40px'} }
 />)
+
 const LeafHr = ({ style, imgStyle, img = leaf }) => (
   <div className="leaf-hr" style={ { ...style } }>
     <img src={img}  style={ { ...imgStyle } } />
@@ -323,6 +220,13 @@ const Cent = ({ children, style }) => (<div style={{ ...style, textAlign: "cente
 
 const Fivestars = ()=> (<div className="stars"> {  (Array(5).fill(0)).map(i=>(<img src={star} />)) }</div>)
 
+const Service = ({ icon, children }) => (<Col lg={2} md={4} >
+  <div>
+    <Icon src={icon} s={0.5}/>
+    <h4>{ children }</h4>
+  </div>
+  </Col>)
+
 const Page = () => (
   <main role="main" id="home">
     <div  className="jumbotron">
@@ -339,8 +243,10 @@ const Page = () => (
           <h2><em>&mdash; Providing  service for business and residential lawn care and landscaping needs to Mentor, Lake County and North Eastern Ohio</em></h2>
         </div>
         <CallNow />
-        <a className="phone-number mobile-hide" href={`tel:${phoneNumber}`}><em>Booking now for 2018!</em></a>
-        <a className="phone-number mobile-show" href={`tel:${phoneNumber}`}><em>{phoneNumber}</em></a>
+        <a className="phone-number mobile-hide" href={`tel:${phoneNumber}`}>
+          <em className="mobile-hide">Booking now for 2018!</em>
+          <em className="mobile-show">{phoneNumber}</em>
+        </a>
 
       </div>
 
@@ -352,42 +258,12 @@ const Page = () => (
           <h3 className="centered">Meet Our 5 Star Services</h3>
         </header>
         <Row className="service-icons" >
-          <Col lg={2} md={4} >
-            <div>
-              <Icon src={grass} s={0.5}/>
-              <h4>Lawn Care</h4>
-            </div>
-          </Col>
-          <Col lg={2} md={4}>
-            <div>
-              <Icon src={leaves} s={0.5}/>
-              <h4>Autumn Clean up</h4>
-            </div>
-          </Col>
-          <Col lg={2}  md={4} >
-            <div>
-              <Icon src={leafs} s={0.5}/>
-              <h4>Spring Spruce up</h4>
-            </div>
-          </Col>
-          <Col lg={2}   md={4} >
-            <div>
-              <Icon src={flowers} s={0.5} />
-              <h4>Flower Bedding</h4>
-            </div>
-          </Col>
-          <Col lg={2} md={4} >
-            <div>
-              <Icon src={scissors} s={0.5} />
-              <h4>Trimming &amp; Pruning</h4>
-            </div>
-          </Col>
-          <Col lg={2} md={4} >
-            <div>
-              <Icon src={thumb} s={0.5} />
-              <h4>And more!</h4>
-            </div>
-          </Col>
+          <Service icon={ grass }>Lawn Care</Service>
+          <Service icon={ leaves }>Autumn Clean up</Service>
+          <Service icon={ leafs }>Spring Spruce up</Service>
+          <Service icon={ flowers }>Flower Bedding</Service>
+          <Service icon={ scissors }>Trimming &amp; Pruning</Service>
+          <Service icon={ thumb }>And More!</Service>
         </Row>
       </section>
       <LeafHr />
@@ -450,39 +326,39 @@ const Page = () => (
           </Row>
         </div>
       </Col>
-    </Row>
-  </section>
+  </Row>
+</section>
 
-  <LeafHr />
-  <section id="contact-us">
-    <br />
-    <br />
-    <Row className="contact">
-      <Col xs={12}>
-        <h3 className="centered">Estimates / Careers / Contact Us</h3>
-      </Col>
-    </Row>
-    <Row>
-      <Col md={{ size: 5, offset: 4 }} xs={12} >
-        <span>&mdash; We are available by telephone - M-F 9am-5:30pm</span>
-        <ul>
-          <li><em>Call us @ <a href={`tel:${phoneNumber}`}>{phoneNumber}</a></em></li>
-          <li><a href="https://www.facebook.com/Lawn-Order-Landscaping-LLC-719546044898978/">Find us on Facebook</a></li>
-          <li>Email anytime &mdash; <a href={`mailto:${emailContact}`}>{ emailContact }</a></li>
-          <li>You may also fill out the form below and we will get try to get back to you within 24hrs.</li>
-        </ul>
-      </Col>
-    </Row>
-    <LeafsHr style={{ background: 'initial' }}/>
-    <Row>
-      <Col xs={12} md={{ size: 6, offset: 3}}>
-        <ContactForm />
-      </Col>
-    </Row>
-  </section>
-</Container>
+<LeafHr />
+<section id="contact-us">
+  <br />
+  <br />
+  <Row className="contact">
+    <Col xs={12}>
+      <h3 className="centered">Estimates / Careers / Contact Us</h3>
+    </Col>
+  </Row>
+  <Row>
+    <Col md={{ size: 5, offset: 4 }} xs={12} >
+      <span>&mdash; We are available by telephone - M-F 9am-5:30pm</span>
+      <ul>
+        <li><em>Call us @ <a href={`tel:${phoneNumber}`}>{phoneNumber}</a></em></li>
+        <li><a href="https://www.facebook.com/Lawn-Order-Landscaping-LLC-719546044898978/">Find us on Facebook</a></li>
+        <li>Email anytime &mdash; <a href={`mailto:${emailContact}`}>{ emailContact }</a></li>
+        <li>You may also fill out the form below and we will get try to get back to you within 24hrs.</li>
+      </ul>
+    </Col>
+  </Row>
+  <LeafsHr style={{ background: 'initial' }}/>
+  <Row>
+    <Col xs={12} md={{ size: 6, offset: 3}}>
+      <ContactForm />
+    </Col>
+  </Row>
+</section>
+  </Container>
 
-  </main>
+</main>
 );
 
 

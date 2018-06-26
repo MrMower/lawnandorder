@@ -1,6 +1,19 @@
 
 //@import "~slick-carousel/slick/slick.css";
 //@import "~slick-carousel/slick/slick-theme.css";
+//
+//
+
+.mobile-show{
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+.mobile-hide{
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
 
 #etphonehome {
   color: gold;
@@ -16,10 +29,10 @@
 }
 
 /*html {
-  background-color: #3d7936;
-  body, main, body .container-fluid {
-    background-color: #FFF;
-  }
+background-color: #3d7936;
+body, main, body .container-fluid {
+background-color: #FFF;
+}
 }*/
 #home {
 
@@ -36,16 +49,6 @@
     width: 100%;
     text-align: center;
 
-    &.mobile-show{
-      @include media-breakpoint-up(md) {
-        display: none;
-      }
-    }
-    &.mobile-hide{
-      @include media-breakpoint-down(sm) {
-        display: none;
-      }
-    }
   }
 
 
@@ -257,7 +260,7 @@
             height: 50%;
           }
           @include media-breakpoint-down(sm) {
-           font-size: 1rem;
+            font-size: 1rem;
           }
           &:before, &:after {
             content: "";

@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "bootstrap": "^4.0.0-beta.2",
+    "bootstrap": "4.0.0",
     "csshake": "^1.5.3",
     "gatsby": "^1.9.221",
     "gatsby-image": "^1.0.42",

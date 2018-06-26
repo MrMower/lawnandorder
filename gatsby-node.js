@@ -5,7 +5,6 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
     loader: `url`,
     exclude: new RegExp('./img/svg-component'),
     query: {
-      limit: 1,
       name: `static/[name].[hash:8].[ext]`
     }
   });
