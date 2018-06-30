@@ -123,7 +123,7 @@ $display2-size: 5.5rem !default;
 $display3-size: 4.5rem !default;
 $display4-size: 3.5rem !default;
 
-@import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import 'bootstrap-lib';
 
 html,
 body {

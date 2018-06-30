@@ -1,13 +1,6 @@
 
-@import 'bootstrap';
+@import './bootstrap-override';
 @import './services';
 @import './home';
 @import './all';
-
-#etphonehome {
-  @include media-breakpoint-down(sm) {
- //   display:none;
-  }
-}
-
 
