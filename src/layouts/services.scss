@@ -3,17 +3,10 @@
 #services {
 
   .container-fluid {
-    background: #f9fff7;
+   // background: #f9fff7;
+    background: #FFF;
   }
 
-  .column2{
-    //  background: linear-gradient(to right,#d7ffd2,#FFF)
-  }
-  .section2 {
-    //padding:0;
-    // margin:0;
-
-  }
   .service-cards {
 
 
@@ -73,10 +66,7 @@
   }
   .hero {
     background: linear-gradient(110deg,#79BB3B,#52B775);
-    //background: `url(${lawn})`; 
-    //background-size: 'cover';
     color: #FFF;
-    //padding: 2rem 2rem 5rem 2rem;
   }
   .hero-title {
     font-weight: 100; 
