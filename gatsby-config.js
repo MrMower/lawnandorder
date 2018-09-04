@@ -8,15 +8,6 @@ module.exports = {
     `gatsby-transformer-json`,
     'gatsby-plugin-sass',
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-116787485-1",
-        head: false,
-        anonymize: false,
-        respectDNT: false,
-      },
-    },
-    {
       resolve: `gatsby-plugin-favicon`,
       options: {
         logo: "./src/img/favicon.png",
