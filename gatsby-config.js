@@ -3,7 +3,6 @@ module.exports = {
     title: `Lawn and Order`,
   },
   plugins: [
-    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-react-helmet`, 
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-json`,
