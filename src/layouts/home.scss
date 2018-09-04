@@ -126,7 +126,7 @@ background-color: #FFF;
       svg {
         transform: rotate(15deg);
         height: auto;
-        width: 120px;
+        width: 90px;
         @include media-breakpoint-down(sm) { 
           width: 60px;
         }
